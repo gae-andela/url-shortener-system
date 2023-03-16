@@ -1,0 +1,3036 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-03-16T11:15:50.399Z",
+        "line": 3,
+        "name": "client cannot register with bad inputs",
+        "description": "",
+        "id": "the-user-can-authenticate;client-cannot-register-with-bad-inputs",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 22151158,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 473781761,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the client register with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstName",
+                  "Cucumber"
+                ]
+              },
+              {
+                "cells": [
+                  "lastName",
+                  "Work"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "bad-email.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "test"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2285889,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the client receives status code of 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 42728788,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the client receives body field \"message\" of \"Validation Errors\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"message\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Validation Errors\"",
+                  "offset": 44
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@auth"
+          },
+          {
+            "name": "@sign-up"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:51.024Z",
+        "line": 13,
+        "name": "client cannot register with used email",
+        "description": "",
+        "id": "the-user-can-authenticate;client-cannot-register-with-used-email",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 451497,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 57070817,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the client register with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstName",
+                  "Cucumber"
+                ]
+              },
+              {
+                "cells": [
+                  "lastName",
+                  "Work"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "test"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 161199,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the client receives status code of 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1303794,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the client receives body field \"errors[0]\" of \"Email already exists\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"errors[0]\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Email already exists\"",
+                  "offset": 46
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@auth"
+          },
+          {
+            "name": "@sign-up"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:51.100Z",
+        "line": 23,
+        "name": "client can register with new email",
+        "description": "",
+        "id": "the-user-can-authenticate;client-can-register-with-new-email",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1063295,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 324883588,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the client register with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstName",
+                  "Cucumber"
+                ]
+              },
+              {
+                "cells": [
+                  "lastName",
+                  "Work"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "new@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "test"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 192299,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the client receives status code of 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 282199,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@auth"
+          },
+          {
+            "name": "@sign-up"
+          }
+        ]
+      }
+    ],
+    "name": "the user can authenticate",
+    "description": "",
+    "id": "the-user-can-authenticate",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/01-auth-sign-up.feature",
+    "tags": [
+      {
+        "name": "@DirtyContextAfter",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@auth",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 20
+        }
+      },
+      {
+        "name": "@sign-up",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 26
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-03-16T11:15:51.438Z",
+        "line": 3,
+        "name": "client cannot login with bad inputs",
+        "description": "",
+        "id": "the-user-can-login;client-cannot-login-with-bad-inputs",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 399298,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10679348,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "bad-email.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "test"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 135500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the client receives status code of 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 783196,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the client receives body field \"message\" of \"Authentication Error\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"message\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Authentication Error\"",
+                  "offset": 44
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@auth"
+          },
+          {
+            "name": "@sign-in"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:51.463Z",
+        "line": 11,
+        "name": "client cannot sign in with unknown email",
+        "description": "",
+        "id": "the-user-can-login;client-cannot-sign-in-with-unknown-email",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 389998,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7591563,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "unknown@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "test"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 122600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the client receives status code of 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 212599,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the client receives body field \"errors[0]\" of \"Invalid username/password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"errors[0]\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Invalid username/password\"",
+                  "offset": 46
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@auth"
+          },
+          {
+            "name": "@sign-in"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:51.478Z",
+        "line": 19,
+        "name": "client cannot sign in with bad password",
+        "description": "",
+        "id": "the-user-can-login;client-cannot-sign-in-with-bad-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 317699,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 105064478,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "test"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 168499,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the client receives status code of 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 249399,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the client receives body field \"errors[0]\" of \"Invalid username/password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"errors[0]\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Invalid username/password\"",
+                  "offset": 46
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@auth"
+          },
+          {
+            "name": "@sign-in"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:51.592Z",
+        "line": 27,
+        "name": "client can sign with valid email and password",
+        "description": "",
+        "id": "the-user-can-login;client-can-sign-with-valid-email-and-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 390298,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 213772939,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 201799,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 182199,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@auth"
+          },
+          {
+            "name": "@sign-in"
+          }
+        ]
+      }
+    ],
+    "name": "the user can login",
+    "description": "",
+    "id": "the-user-can-login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/02-auth-sign-in.feature",
+    "tags": [
+      {
+        "name": "@DirtyContextAfter",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@auth",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 20
+        }
+      },
+      {
+        "name": "@sign-in",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 26
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-03-16T11:15:51.821Z",
+        "line": 3,
+        "name": "anonymous cannot get details",
+        "description": "",
+        "id": "a-logged-user-can-fetch-its-details;anonymous-cannot-get-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 448098,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6198769,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the client get current user",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_get_current_user()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 120299,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the client receives status code of 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 216498,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the client receives body field \"message\" of \"Authentication Error\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"message\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Authentication Error\"",
+                  "offset": 44
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@auth"
+          },
+          {
+            "name": "@who"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:51.840Z",
+        "line": 9,
+        "name": "logged user can fetch its details",
+        "description": "",
+        "id": "a-logged-user-can-fetch-its-details;logged-user-can-fetch-its-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 367999,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 207085472,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 177899,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 164999,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28259760,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the client get current user",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_get_current_user()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 131600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 276799,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the client receives body field \"email\" of \"root@xyz.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"email\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"root@xyz.com\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 250298,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the client receives body field \"password\" is null \"true\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"password\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"true\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_is_null(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@auth"
+          },
+          {
+            "name": "@who"
+          }
+        ]
+      }
+    ],
+    "name": "a logged user can fetch its details",
+    "description": "",
+    "id": "a-logged-user-can-fetch-its-details",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/03-auth-who.feature",
+    "tags": [
+      {
+        "name": "@DirtyContextAfter",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@auth",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 20
+        }
+      },
+      {
+        "name": "@who",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 26
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-03-16T11:15:52.089Z",
+        "line": 3,
+        "name": "anonymous cannot get urls",
+        "description": "",
+        "id": "a-logged-user-can-fetch-its-urls-and-manage-it;anonymous-cannot-get-urls",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 430498,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13934630,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the client fetch urls",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_fetch_urls()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 124799,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the client receives status code of 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@read"
+          },
+          {
+            "name": "@remove"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:52.123Z",
+        "line": 8,
+        "name": "logged user can fetch urls",
+        "description": "",
+        "id": "a-logged-user-can-fetch-its-urls-and-manage-it;logged-user-can-fetch-urls",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 872996,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 221412902,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 173099,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 169099,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 38287010,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the client fetch urls",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_fetch_urls()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 140400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 324098,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the client receives body field \"[0].id\" is null \"false\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"[0].id\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"false\"",
+                  "offset": 48
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_is_null(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 288099,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the client receives body field \"[0].longUrl\" is null \"false\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"[0].longUrl\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"false\"",
+                  "offset": 53
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_is_null(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 269999,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the client receives body field \"[0].shortUrl\" is null \"false\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"[0].shortUrl\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"false\"",
+                  "offset": 54
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_is_null(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@read"
+          },
+          {
+            "name": "@remove"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:52.399Z",
+        "line": 21,
+        "name": "anonymous cannot remove urls",
+        "description": "",
+        "id": "a-logged-user-can-fetch-its-urls-and-manage-it;anonymous-cannot-remove-urls",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 386898,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6243169,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the client removes url with ID \"2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_remove_url(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 419997,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the client receives status code of 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@read"
+          },
+          {
+            "name": "@remove"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:52.418Z",
+        "line": 26,
+        "name": "logged user can remove urls",
+        "description": "",
+        "id": "a-logged-user-can-fetch-its-urls-and-manage-it;logged-user-can-remove-urls",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 756096,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 209556660,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 159099,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 163899,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12351439,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the client removes url with ID \"2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_remove_url(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 359899,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the client receives status code of 204",
+            "match": {
+              "arguments": [
+                {
+                  "val": "204",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@read"
+          },
+          {
+            "name": "@remove"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:52.652Z",
+        "line": 36,
+        "name": "anonymous cannot get urls stats",
+        "description": "",
+        "id": "a-logged-user-can-fetch-its-urls-and-manage-it;anonymous-cannot-get-urls-stats",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 392098,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3527383,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "the client fetch stats of urls \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_fetch_stats_of_urls(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 148500,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "the client receives status code of 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@read"
+          },
+          {
+            "name": "@remove"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:52.664Z",
+        "line": 41,
+        "name": "logged user can get urls stats",
+        "description": "",
+        "id": "a-logged-user-can-fetch-its-urls-and-manage-it;logged-user-can-get-urls-stats",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 368498,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 207969268,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 195699,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 179899,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12093240,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the client fetch urls",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_fetch_urls()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 110699,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 23505983,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the client fetch stats of urls \"response.[0].id\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"response.[0].id\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_fetch_stats_of_urls(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 119399,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 505498,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "the client receives body field \"[0].id\" of \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"[0].id\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 521097,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "the client receives body field \"[0].ip\" of \"0.0.0.0\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"[0].ip\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"0.0.0.0\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@read"
+          },
+          {
+            "name": "@remove"
+          }
+        ]
+      }
+    ],
+    "name": "a logged user can fetch its urls and manage it",
+    "description": "",
+    "id": "a-logged-user-can-fetch-its-urls-and-manage-it",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/04-urls-manage.feature",
+    "tags": [
+      {
+        "name": "@DirtyContextAfter",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@urls",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 20
+        }
+      },
+      {
+        "name": "@read",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 26
+        }
+      },
+      {
+        "name": "@remove",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 32
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-03-16T11:15:52.920Z",
+        "line": 3,
+        "name": "anonymous cannot create short urls",
+        "description": "",
+        "id": "a-logged-user-can-create-short-urls;anonymous-cannot-create-short-urls",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 665297,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3101785,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the client shorten url with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_shorten_url(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "longUrl",
+                  "https://amazon.com"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 92999,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the client receives status code of 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@shorten"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:52.945Z",
+        "line": 9,
+        "name": "cannot create short urls with bad inputs",
+        "description": "",
+        "id": "a-logged-user-can-create-short-urls;cannot-create-short-urls-with-bad-inputs",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 365398,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 214103738,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 169399,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 186199,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18707507,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the client shorten url with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_shorten_url(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "shortUrl",
+                  "cust.root"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 120900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the client receives status code of 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@shorten"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:53.189Z",
+        "line": 20,
+        "name": "logged user can create short urls",
+        "description": "",
+        "id": "a-logged-user-can-create-short-urls;logged-user-can-create-short-urls",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 367098,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 208078368,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 158800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 165899,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14369329,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the client shorten url with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_shorten_url(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "longUrl",
+                  "https://amazon.com"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 114799,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the client receives status code of 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 253998,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the client receives body field \"shortUrl\" is null \"false\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"shortUrl\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"false\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_is_null(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@shorten"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:53.429Z",
+        "line": 32,
+        "name": "logged user can set custom short urls",
+        "description": "",
+        "id": "a-logged-user-can-create-short-urls;logged-user-can-set-custom-short-urls",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 379398,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 215298032,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 145599,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 158899,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23319084,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "the client shorten url with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_shorten_url(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "longUrl",
+                  "https://amazon.com"
+                ]
+              },
+              {
+                "cells": [
+                  "shortUrl",
+                  "test"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 125699,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the client receives status code of 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 211598,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the client receives body field \"shortUrl\" of \"cust.test\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"shortUrl\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"cust.test\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@shorten"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:53.676Z",
+        "line": 45,
+        "name": "logged user cannot use already used custom urls",
+        "description": "",
+        "id": "a-logged-user-can-create-short-urls;logged-user-cannot-use-already-used-custom-urls",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 339199,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 236840425,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 135500,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 163599,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13545333,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "the client shorten url with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_shorten_url(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "longUrl",
+                  "https://another.com"
+                ]
+              },
+              {
+                "cells": [
+                  "shortUrl",
+                  "oth"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 106600,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "the client receives status code of 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9957551,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the client shorten url with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_shorten_url(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "longUrl",
+                  "https://any.com"
+                ]
+              },
+              {
+                "cells": [
+                  "shortUrl",
+                  "oth"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88699,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the client receives status code of 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@shorten"
+          }
+        ]
+      }
+    ],
+    "name": "a logged user can create short urls",
+    "description": "",
+    "id": "a-logged-user-can-create-short-urls",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/05-urls-shorten.feature",
+    "tags": [
+      {
+        "name": "@DirtyContextAfter",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@urls",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 20
+        }
+      },
+      {
+        "name": "@shorten",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 26
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-03-16T11:15:53.945Z",
+        "line": 3,
+        "name": "anyone can be redirected",
+        "description": "",
+        "id": "any-user-can-be-redirected-via-short-urls;anyone-can-be-redirected",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 351998,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 209472261,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 170100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 185999,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12465738,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the client shorten url with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_shorten_url(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "longUrl",
+                  "https://amazon.com"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 112200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the client receives status code of 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15734222,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the client browses short url \"response.shortUrl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"response.shortUrl\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_browses_short_url(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 109100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the client receives status code of 302",
+            "match": {
+              "arguments": [
+                {
+                  "val": "302",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@redirect"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:54.196Z",
+        "line": 16,
+        "name": "cannot be redirected with bad url",
+        "description": "",
+        "id": "any-user-can-be-redirected-via-short-urls;cannot-be-redirected-with-bad-url",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 373498,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5419273,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the client browses short url \"z\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"z\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_browses_short_url(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 98700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the client receives status code of 404",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@redirect"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-16T11:15:54.208Z",
+        "line": 21,
+        "name": "can browse custom short urls",
+        "description": "",
+        "id": "any-user-can-be-redirected-via-short-urls;can-browse-custom-short-urls",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 318798,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the server is up",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 207480670,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the client sign in with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "root@xyz.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "root"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 134899,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the client receives status code of 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 169499,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the client register token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12957835,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the client shorten url with",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_shorten_url(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "longUrl",
+                  "https://amazon.com"
+                ]
+              },
+              {
+                "cells": [
+                  "shortUrl",
+                  "wonders"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 102200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the client receives status code of 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 189799,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the client receives body field \"shortUrl\" of \"cust.wonders\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"shortUrl\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"cust.wonders\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10180549,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the client browses short url \"cust.wonders\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"cust.wonders\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_browses_short_url(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 89600,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the client receives status code of 302",
+            "match": {
+              "arguments": [
+                {
+                  "val": "302",
+                  "offset": 35
+                }
+              ],
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_status_code_of(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DirtyContextAfter"
+          },
+          {
+            "name": "@urls"
+          },
+          {
+            "name": "@redirect"
+          }
+        ]
+      }
+    ],
+    "name": "any user can be redirected via short urls",
+    "description": "",
+    "id": "any-user-can-be-redirected-via-short-urls",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/06-urls-redirect.feature",
+    "tags": [
+      {
+        "name": "@DirtyContextAfter",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@urls",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 20
+        }
+      },
+      {
+        "name": "@redirect",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 26
+        }
+      }
+    ]
+  }
+]
