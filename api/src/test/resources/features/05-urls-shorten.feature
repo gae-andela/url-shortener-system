@@ -1,4 +1,4 @@
-@DirtyContextAfter @urls @shorten
+@urls @shorten
 Feature: a logged user can create short urls
   Scenario: anonymous cannot create short urls
     Given the server is up

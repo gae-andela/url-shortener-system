@@ -1,4 +1,4 @@
-@DirtyContextAfter @urls @read @remove
+@urls @read @remove
 Feature: a logged user can fetch its urls and manage it
   Scenario: anonymous cannot get urls
     Given the server is up

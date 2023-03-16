@@ -62,6 +62,11 @@ public class StepDefsIntegrationTest extends BaseIntegrationTest {
 	public void the_client_browses_short_url(String shortUrl) throws Throwable {
 		executeGet(absoluteUrl(String.format("/api/xyz/%s", valueOrPath(shortUrl))));
 	}
+	
+	@When("the client remove token")
+	public void the_client_remove_token() throws Throwable {
+		latestToken = null;
+	}
 
 	// -------------------------------------------------------------------------
 	// THEN
@@ -89,7 +94,7 @@ public class StepDefsIntegrationTest extends BaseIntegrationTest {
 	}
 	
 	@Then("the client register token")
-	public void the_client_receives_body_field_of() throws Throwable {
+	public void the_client_register_token() throws Throwable {
 		var json = JsonPath.parse(latestResponse.getBody());
 		var token = json.read("accessToken");
 		assertTrue("Expected non empty token",

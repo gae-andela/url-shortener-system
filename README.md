@@ -12,9 +12,11 @@ The API works with an H2 in-memory database. For running the application, one ju
     mvn spring-boot:run
 ```
 
-- Open your browser on the URL [http://localhost:8080](http://localhost:8080).
+- Open your browser on the URL [http://localhost:80](http://localhost:80).
 - A user is already provided upon starting the application username: **root@xyz.com** and password: **root**.
 - You can also create a new user by clicking the corresponding displayed on the starting page.
+
+If needed, the application can run on a different port, just change the port number in the **api/src/main/resources/application.yml**.
 
 ## Run from Docker
 
@@ -22,7 +24,7 @@ This application can also be run from docker; you just need to build the Docker 
 
 ```shell
 docker build -t your-org/url-shortener-system .
-docker run -p 8080:8080 your-org/url-shortener-system
+docker run -p 80:80 your-org/url-shortener-system
 ```
 
 ## Build
@@ -63,3 +65,8 @@ The feature coverage can be seen by browsing the file **api/target/cucumber-repo
 
 For running the unit tests for the Angular application, simply run `ng test` or `ng test --code-coverage` for also generating coverage information.<br/>
 The coverage result can be seen by browsing the file **web/coverage/url-shortener-system/index.html**.
+
+## Latest reports
+
+The test reports generated with the latest version of code is available on this current repo Github Page.
+Just follow this link: [https://gae-andela.github.io/url-shortener-system/](https://gae-andela.github.io/url-shortener-system/).

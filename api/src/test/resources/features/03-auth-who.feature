@@ -1,4 +1,4 @@
-@DirtyContextAfter @auth @who
+@auth @who
 Feature: a logged user can fetch its details
   Scenario: anonymous cannot get details
     Given the server is up

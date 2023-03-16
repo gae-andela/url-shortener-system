@@ -1,4 +1,4 @@
-@DirtyContextAfter @urls @redirect
+@urls @redirect
 Feature: any user can be redirected via short urls
   Scenario: anyone can be redirected
     Given the server is up
@@ -10,6 +10,7 @@ Feature: any user can be redirected via short urls
     And the client shorten url with
       | longUrl     | https://amazon.com    |
     And the client receives status code of 201
+    And the client remove token
     Then the client browses short url "response.shortUrl"
     Then the client receives status code of 302
 

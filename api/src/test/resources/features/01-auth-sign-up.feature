@@ -1,4 +1,4 @@
-@DirtyContextAfter @auth @sign-up
+@auth @sign-up
 Feature: the user can authenticate
   Scenario: client cannot register with bad inputs
     Given the server is up
