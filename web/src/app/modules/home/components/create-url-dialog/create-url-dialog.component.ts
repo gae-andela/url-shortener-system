@@ -35,7 +35,11 @@ export class CreateUrlDialogComponent extends WithForm() {
   onSubmit(): void {
     const { longUrl, shortUrl, expiryDate } = this.formGroup.value;
     this._urlService
-      .create({ longUrl, shortUrl, expiryDate })
+      .create({
+        longUrl,
+        shortUrl: shortUrl?.trim().length ? shortUrl.trim() : null,
+        expiryDate,
+      })
       .subscribe((userUrl: UserUrl) => {
         const callback = (err: any) => {
           if (err) {
