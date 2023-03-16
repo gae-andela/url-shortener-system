@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DemoDataListener.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">url-shortener-system</a> &gt; <a href="index.source.html" class="el_package">com.xyz.urlshortenersystem.event</a> &gt; <span class="el_source">DemoDataListener.java</span></div><h1>DemoDataListener.java</h1><pre class="source lang-java linenums">package com.xyz.urlshortenersystem.event;
+
+import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.annotation.Profile;
+import org.springframework.context.event.EventListener;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+
+import com.xyz.urlshortenersystem.Initializer;
+import com.xyz.urlshortenersystem.entity.UserAccount;
+import com.xyz.urlshortenersystem.entity.UserRole;
+import com.xyz.urlshortenersystem.entity.UserUrl;
+import com.xyz.urlshortenersystem.entity.UserUrlStats;
+import com.xyz.urlshortenersystem.enumeration.RoleName;
+import com.xyz.urlshortenersystem.repository.UserAccountRepository;
+import com.xyz.urlshortenersystem.repository.UserRoleRepository;
+import com.xyz.urlshortenersystem.repository.UserUrlRepository;
+import com.xyz.urlshortenersystem.repository.UserUrlStatsRepository;
+import com.xyz.urlshortenersystem.service.InputConversionService;
+import com.xyz.urlshortenersystem.service.NextIdService;
+
+/**
+ * 
+ * The purpose of this class is to populate database with some data Helpful for
+ * demo
+ */
+@Component
+@Profile(&quot;!test&quot;)
+<span class="fc" id="L37">public class DemoDataListener extends Initializer {</span>
+
+<span class="fc" id="L39">	private static final String[] URLS = { &quot;https://google.com&quot;, &quot;https://twitter.com&quot;, &quot;https://stackoverflow.com/&quot; };</span>
+
+	@Autowired
+	private NextIdService nextIdService;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	@Autowired
+	private UserUrlRepository userUrlRepository;
+	@Autowired
+	private UserRoleRepository userRoleRepository;
+	@Autowired
+	private UserAccountRepository userAccountRepository;
+	@Autowired
+	private UserUrlStatsRepository userUrlStatsRepository;
+	@Autowired
+	private InputConversionService inputConversionService;
+
+	@EventListener(ApplicationReadyEvent.class)
+	public void runAfterStartup() {
+<span class="fc" id="L58">		super.runAfterStartup();</span>
+<span class="fc" id="L59">		var roles = initUserRoles();</span>
+<span class="fc" id="L60">		var user = initUserAccount(roles);</span>
+<span class="fc" id="L61">		var userUrls = initUserUrls(user);</span>
+<span class="fc" id="L62">		initUserUrlStats(userUrls.get(0));</span>
+<span class="fc" id="L63">	}</span>
+
+	private List&lt;UserRole&gt; initUserRoles() {
+<span class="pc" id="L66">		var existingRoles = userRoleRepository.findAll().stream().map((r) -&gt; r.getName()).collect(Collectors.toList());</span>
+<span class="pc bpc" id="L67" title="1 of 2 branches missed.">		var toCreate = Arrays.stream(RoleName.values()).filter((r) -&gt; !existingRoles.contains(r))</span>
+<span class="fc" id="L68">				.map((r) -&gt; UserRole.builder().name(r).build()).collect(Collectors.toList());</span>
+<span class="fc" id="L69">		return userRoleRepository.saveAll(toCreate);</span>
+	}
+
+	private UserAccount initUserAccount(List&lt;UserRole&gt; roles) {
+<span class="fc" id="L73">		var user = UserAccount.builder().firstName(&quot;John&quot;).lastName(&quot;DOE&quot;).email(&quot;root@xyz.com&quot;)</span>
+<span class="fc" id="L74">				.password(passwordEncoder.encode(&quot;root&quot;)).roles(roles).build();</span>
+<span class="fc" id="L75">		return userAccountRepository.save(user);</span>
+	}
+
+	private List&lt;UserUrl&gt; initUserUrls(UserAccount userAccount) {
+<span class="fc" id="L79">		var expiryDate = LocalDate.now().plusDays(50);</span>
+<span class="fc" id="L80">		return Stream.of(URLS).map((url) -&gt; {</span>
+<span class="fc" id="L81">			var id = nextIdService.nextId();</span>
+<span class="fc" id="L82">			var userUrl = UserUrl.builder().id(id).longUrl(url).expiryDate(expiryDate)</span>
+<span class="fc" id="L83">					.shortUrl(inputConversionService.encode(id)).owner(userAccount).build();</span>
+<span class="fc" id="L84">			return userUrlRepository.save(userUrl);</span>
+<span class="fc" id="L85">		}).collect(Collectors.toList());</span>
+	}
+
+	private void initUserUrlStats(UserUrl userUrl) {
+<span class="fc" id="L89">		Stream.of(URLS).forEach((url) -&gt; {</span>
+<span class="fc" id="L90">			var userUrlStats = IntStream.range(0, 10)</span>
+<span class="fc" id="L91">					.mapToObj((i) -&gt; UserUrlStats.builder().ip(&quot;0.0.0.0&quot;).referrer(url).target(userUrl).build())</span>
+<span class="fc" id="L92">					.collect(Collectors.toList());</span>
+<span class="fc" id="L93">			userUrlStatsRepository.saveAll(userUrlStats);</span>
+<span class="fc" id="L94">		});</span>
+<span class="fc" id="L95">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

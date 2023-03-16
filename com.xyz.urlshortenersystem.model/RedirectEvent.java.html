@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RedirectEvent.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">url-shortener-system</a> &gt; <a href="index.source.html" class="el_package">com.xyz.urlshortenersystem.model</a> &gt; <span class="el_source">RedirectEvent.java</span></div><h1>RedirectEvent.java</h1><pre class="source lang-java linenums">package com.xyz.urlshortenersystem.model;
+
+import org.springframework.context.ApplicationEvent;
+
+import com.xyz.urlshortenersystem.entity.UserUrl;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+<span class="nc" id="L10">@Data</span>
+<span class="nc bnc" id="L11" title="All 30 branches missed.">@EqualsAndHashCode(callSuper = false)</span>
+public class RedirectEvent extends ApplicationEvent {
+
+	private static final long serialVersionUID = 1L;
+<span class="fc" id="L15">	private UserUrl target; // In a microservice architecture, we will use the ID instead</span>
+<span class="fc" id="L16">	private String referrer;</span>
+<span class="fc" id="L17">	private String ip;</span>
+
+	public RedirectEvent(Object source, String referrer, String ip, UserUrl target) {
+<span class="fc" id="L20">		super(source);</span>
+<span class="fc" id="L21">		this.referrer = referrer;</span>
+<span class="fc" id="L22">		this.ip = ip;</span>
+<span class="fc" id="L23">		this.target = target;</span>
+<span class="fc" id="L24">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

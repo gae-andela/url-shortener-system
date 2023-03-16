@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RedirectServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">url-shortener-system</a> &gt; <a href="index.source.html" class="el_package">com.xyz.urlshortenersystem.service.impl</a> &gt; <span class="el_source">RedirectServiceImpl.java</span></div><h1>RedirectServiceImpl.java</h1><pre class="source lang-java linenums">package com.xyz.urlshortenersystem.service.impl;
+
+import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.xyz.urlshortenersystem.entity.UserUrl;
+import com.xyz.urlshortenersystem.event.RedirectEventPublisher;
+import com.xyz.urlshortenersystem.exception.RecordNotFoundException;
+import com.xyz.urlshortenersystem.repository.UserUrlRepository;
+import com.xyz.urlshortenersystem.service.InputConversionService;
+import com.xyz.urlshortenersystem.service.RedirectService;
+
+@Service
+<span class="fc" id="L16">public class RedirectServiceImpl implements RedirectService {</span>
+
+	@Autowired
+	private RedirectEventPublisher redirectEventPublisher;
+
+	@Autowired
+	private UserUrlRepository userUrlRepository;
+
+	@Autowired
+	private InputConversionService inputConversionService;
+
+	@Override
+	public String toLongUrl(String shortUrl) {
+<span class="fc" id="L29">		UserUrl userUrl = null;</span>
+<span class="fc" id="L30">		var message = &quot;No correspondence for url &quot; + shortUrl;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">		if (shortUrl.startsWith(UserUrl.CUSTOM_KEY)) {</span>
+			// We are trying to redirect a custom key, then no need to do conversion logic
+			// NOTE: We avoid conversion logic in order to eliminate false positive: a
+			// custom URL converted
+			// to an ID referring another longURL, or not even belonging to current User
+<span class="fc" id="L36">			userUrl = userUrlRepository.findByShortUrl(shortUrl)</span>
+<span class="fc" id="L37">					.orElseThrow(() -&gt; new RecordNotFoundException(message));</span>
+		} else {
+			// When not on custom URL, we simply retrieve identifier by applying some
+			// conversion logic
+<span class="fc" id="L41">			var id = inputConversionService.decode(shortUrl);</span>
+<span class="fc" id="L42">			userUrl = userUrlRepository.findById(id).orElseThrow(() -&gt; new RecordNotFoundException(message));</span>
+		}
+<span class="fc bfc" id="L44" title="All 2 branches covered.">		if (LocalDate.now().isAfter(userUrl.getExpiryDate())) {</span>
+			// URL is expired, we should not redirect it anymore
+<span class="fc" id="L46">			userUrlRepository.delete(userUrl);</span>
+<span class="fc" id="L47">			throw new RecordNotFoundException(&quot;Link expired&quot;);</span>
+		}
+		// Notifying that a redirection occurred without blocking current thread
+<span class="fc" id="L50">		redirectEventPublisher.publish(userUrl);</span>
+<span class="fc" id="L51">		return userUrl.getLongUrl();</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

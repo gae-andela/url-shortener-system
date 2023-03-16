@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AuthenticationServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">url-shortener-system</a> &gt; <a href="index.source.html" class="el_package">com.xyz.urlshortenersystem.service.impl</a> &gt; <span class="el_source">AuthenticationServiceImpl.java</span></div><h1>AuthenticationServiceImpl.java</h1><pre class="source lang-java linenums">package com.xyz.urlshortenersystem.service.impl;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.xyz.urlshortenersystem.entity.UserAccount;
+import com.xyz.urlshortenersystem.enumeration.RoleName;
+import com.xyz.urlshortenersystem.exception.BadRequestException;
+import com.xyz.urlshortenersystem.exception.UserAuthenticationException;
+import com.xyz.urlshortenersystem.model.UserToken;
+import com.xyz.urlshortenersystem.repository.UserAccountRepository;
+import com.xyz.urlshortenersystem.repository.UserRoleRepository;
+import com.xyz.urlshortenersystem.security.JwtProvider;
+import com.xyz.urlshortenersystem.service.AuthenticationService;
+import com.xyz.urlshortenersystem.service.UserAccountService;
+
+@Service
+<span class="fc" id="L24">public class AuthenticationServiceImpl implements AuthenticationService {</span>
+	@Autowired
+	private AuthenticationManager authenticationManager;
+
+	@Autowired
+	private UserAccountService userAccountService;
+
+	@Autowired
+	private UserAccountRepository userAccountRepository;
+
+	@Autowired
+	private UserRoleRepository userRoleRepository;
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+
+	@Autowired
+	private JwtProvider jwtProvider;
+
+	@Override
+	public UserAccount who() {
+<span class="fc" id="L45">		return userAccountService.getCurrentUser();</span>
+	}
+
+	@Override
+	public UserToken signUp(final UserAccount user) {
+		// 1- Verify inputs: user existence, role configuration, etc...
+<span class="fc" id="L51">		userAccountRepository.findByEmail(user.getEmail()).ifPresent(u -&gt; {</span>
+<span class="fc" id="L52">			throw new BadRequestException(&quot;Email already exists&quot;);</span>
+		});
+<span class="fc" id="L54">		var role = userRoleRepository.findByName(RoleName.USER)</span>
+<span class="fc" id="L55">				.orElseThrow(() -&gt; new RuntimeException(&quot;Configurations missing&quot;));</span>
+
+		// 2- Encrypting password and saving user to database
+<span class="fc" id="L58">		final var rawPassword = user.getPassword();</span>
+<span class="fc" id="L59">		user.setPassword(passwordEncoder.encode(rawPassword));</span>
+<span class="fc" id="L60">		user.setRoles(Arrays.asList(role));</span>
+<span class="fc" id="L61">		var savedUser = userAccountRepository.save(user);</span>
+<span class="fc" id="L62">		return getToken(savedUser, rawPassword);</span>
+	}
+
+	@Override
+	public UserToken signIn(final String email, final String password) {
+		// 1- Check for given user
+<span class="fc" id="L68">		var user = userAccountRepository.findByEmail(email.toLowerCase())</span>
+<span class="fc" id="L69">				.orElseThrow(() -&gt; new UserAuthenticationException(&quot;Invalid username/password&quot;));</span>
+
+		// 2- Testing provided password with registered one
+<span class="fc bfc" id="L72" title="All 2 branches covered.">		if (!passwordEncoder.matches(password, user.getPassword())) {</span>
+<span class="fc" id="L73">			throw new UserAuthenticationException(&quot;Invalid username/password&quot;);</span>
+		}
+<span class="fc" id="L75">		return getToken(user, password);</span>
+	}
+
+	private UserToken getToken(final UserAccount user, final String rawPassword) {
+<span class="fc" id="L79">		var authentication = authenticationManager</span>
+<span class="fc" id="L80">				.authenticate(new UsernamePasswordAuthenticationToken(user.getEmail(), rawPassword));</span>
+<span class="fc" id="L81">		SecurityContextHolder.getContext().setAuthentication(authentication);</span>
+<span class="fc" id="L82">		return UserToken.builder().accessToken(jwtProvider.generateToken(authentication)).build();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
