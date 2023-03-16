@@ -1,0 +1,12 @@
+<ngb-toast
+  *ngFor="let toast of toasts; trackBy: trackById"
+  [id]="'toast-' + toast.id"
+  [autohide]="toast.autoHide"
+  [animation]="true"
+  [header]="toast.title"
+  [class]="'mb-2 bg-' + toast.type"
+  [delay]="toast.delay"
+  (hide)="onRemove(toast)"
+>
+  {{ toast.message }}</ngb-toast
+>

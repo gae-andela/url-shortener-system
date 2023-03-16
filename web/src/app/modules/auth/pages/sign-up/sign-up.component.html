@@ -1,0 +1,63 @@
+<div class="col-12 d-flex justify-content-center">
+  <form class="col-12 col-lg-6" [formGroup]="formGroup" (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">First name</label>
+      <input
+        class="form-control"
+        id="firstName"
+        formControlName="firstName"
+        placeholder="ie. John"
+        [ngClass]="fieldClasses('firstName')"
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last name</label>
+      <input
+        class="form-control"
+        id="lastName"
+        formControlName="lastName"
+        placeholder="ie. DOE"
+        [ngClass]="fieldClasses('lastName')"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+        placeholder="Enter email"
+        [ngClass]="fieldClasses('email')"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+        placeholder="Password"
+        autocomplete="off"
+        [ngClass]="fieldClasses('password')"
+      />
+    </div>
+    <div class="mt-2">
+      <button
+        type="submit"
+        class="btn btn-primary btn-block col-12"
+        [disabled]="!formGroup.valid"
+      >
+        Register
+      </button>
+      <p class="text-center">
+        <a
+          [routerLink]="[routePaths.root, routePaths.auth, routePaths.signIn]"
+          href="#"
+          >Already registered? Sign in</a
+        >
+      </p>
+    </div>
+  </form>
+</div>

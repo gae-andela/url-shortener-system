@@ -1,0 +1,29 @@
+name: Java CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Build with Maven
+        working-directory: ./api
+        run: |
+          mvn clean install
+          touch target/.nojekyll
+
+      - name: Deploy
+        # configure an external GitHub Pages deploy workflow here
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: reporting
+          folder: api/target/site/jacoco

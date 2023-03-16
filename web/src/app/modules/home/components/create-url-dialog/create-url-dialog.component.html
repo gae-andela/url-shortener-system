@@ -1,0 +1,57 @@
+<div class="col-12 d-flex justify-content-center">
+  <form class="col-12" [formGroup]="formGroup" (submit)="onSubmit()">
+    <div class="modal-header">
+      <h4 class="modal-title">Shorten an URL</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="onClose()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="longUrl">URL</label>
+        <input
+          type="url"
+          class="form-control"
+          id="longUrl"
+          formControlName="longUrl"
+          placeholder="ie: https://my-very-very-ver-ylong-url.com"
+          [ngClass]="fieldClasses('longUrl')"
+        />
+        <small id="shortUrlHelp" class="form-text text-muted"
+          >Enter the URL to shorten</small
+        >
+      </div>
+      <hr />
+      <div class="form-group">
+        <label for="shortUrl">Custom Short URL</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">{{ rootCustomUrl }}</span>
+          </div>
+          <input
+            class="form-control"
+            id="shortUrl"
+            formControlName="shortUrl"
+            placeholder="my-custom-url"
+            [ngClass]="fieldClasses('shortUrl')"
+          />
+          <small id="shortUrlHelp" class="form-text text-muted"
+            >You can create your own short URL if available.</small
+          >
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="submit"
+        class="btn btn-primary btn-block col-12"
+        [disabled]="!formGroup.valid"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
