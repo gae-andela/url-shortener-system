@@ -58,7 +58,9 @@ export class CreateUrlDialogComponent extends WithForm() {
 
   private _createForm(): FormGroup {
     // URL regex for validating user input
-    const urlRegex = '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?';
+    const urlRegex = new RegExp(
+      '^(http[s]?:\\/\\/(www\\.)?|ftp:\\/\\/(www\\.)?|www\\.){1}([0-9A-Za-z-\\.@:%_+~#=]+)+((\\.[a-zA-Z]{2,3})+)(/(.)*)?(\\?(.)*)?'
+    );
 
     return this._formBuilder.group({
       longUrl: [null, [Validators.required, Validators.pattern(urlRegex)]],

@@ -1,0 +1,8 @@
+<button
+  type="button"
+  [ngClass]="'btn btn-sm ' + className"
+  (click)="onCopy()"
+  [ngbTooltip]="action"
+>
+  <img src="/assets/img/copy.svg" [alt]="action" width="25" height="25" />
+</button>

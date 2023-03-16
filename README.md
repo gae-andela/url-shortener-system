@@ -57,6 +57,7 @@ The generated files will be automatically copied to target folder.
 
 For running the unit tests for the JAVA application, simply run `mvn test`.<br/>
 The test coverage can be seen by browsing the file **api/target/site/jacoco/index.html**.
+The feature coverage can be seen by browsing the file **api/target/cucumber-reports/index.html**.
 
 ### Angular
 

@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "coverage": "ng test --code-coverage",
+    "report": "ng test --code-coverage --watch=false --browsers ChromeHeadless",
     "clean:java": "node_modules\\.bin\\del \"dist\" --force && node_modules\\.bin\\del \"..\\api\\src\\main\\resources\\public\" --force",
     "build:java": "npm run clean:java && ng build --output-path=../api/src/main/resources/public"
   },

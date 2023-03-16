@@ -1,4 +1,4 @@
-name: Java CI
+name: Building CI
 
 on:
   push:
@@ -21,17 +21,29 @@ jobs:
         working-directory: ./api
         run: |
           mvn clean install
-          mkdir out
-          mkdir out/jacoco
-          mkdir out/cucumber
-          touch out/.nojekyll
-          cp -r target/site/jacoco/* out/jacoco
-          cp -r target/cucumber-reports/* out/cucumber
-          cp ../reporting/index.html out/index.html
+          mkdir ../out
+          mkdir ../out/jacoco
+          mkdir ../out/cucumber
+          touch ../out/.nojekyll
+          cp -r target/site/jacoco/* ../out/jacoco
+          cp -r target/cucumber-reports/* ../out/cucumber
+          cp ../reporting/index.html ../out/index.html
+
+      - name: Set up NODE 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Build with Npm
+        working-directory: ./web
+        run: |
+          npm install
+          npm run report
+          mkdir ../out/angular
+          cp -r coverage/url-shortener-system/* ../out/angular
 
       - name: Deploy
         # configure an external GitHub Pages deploy workflow here
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: reporting
-          folder: api/out
+          folder: out

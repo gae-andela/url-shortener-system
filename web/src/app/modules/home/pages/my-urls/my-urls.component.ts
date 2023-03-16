@@ -90,4 +90,9 @@ export class MyUrlsComponent implements OnInit {
         })))
     );
   }
+
+  trackById(_: number, userUrl: UserUrl): number {
+    // That way we can increase performances by avoiding rendering all items on change
+    return userUrl.id;
+  }
 }

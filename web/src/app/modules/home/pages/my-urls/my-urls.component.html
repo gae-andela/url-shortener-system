@@ -32,33 +32,43 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let url of userUrls; index as i">
+    <tr *ngFor="let url of userUrls; index as i; trackBy: trackById">
       <th scope="row">{{ url.id }}</th>
       <td>
-        {{ url.longUrl }}
+        <span [ngbTooltip]="url.longUrl">
+          {{ url.longUrl | truncate }}
+        </span>
+        <app-copy-clipboard-btn
+          [value]="url.longUrl"
+          className="d-none d-md-table-cell"
+          title="URL copied"
+          message="The long URL has been copied to your clipboard"
+        ></app-copy-clipboard-btn>
       </td>
-      <td class="d-none d-md-table-cell">{{ url.shortUrl }}</td>
+      <td class="d-none d-md-table-cell">
+        <span [ngbTooltip]="url.shortUrl">
+          {{ url.shortUrl | truncate : true }}
+        </span>
+        <app-copy-clipboard-btn
+          [value]="url.shortUrl"
+          title="URL copied"
+          message="The short URL has been copied to your clipboard"
+        ></app-copy-clipboard-btn>
+      </td>
       <td class="d-none d-md-table-cell">{{ url.createDate | date }}</td>
       <td class="d-none d-md-table-cell">{{ url.expiryDate | date }}</td>
       <td>
-        <button
-          type="button"
-          class="btn btn-sm"
-          (click)="onCopy(url)"
-          title="Copy Short URL"
-        >
-          <img
-            src="/assets/img/copy.svg"
-            alt="Copy Short URL"
-            width="25"
-            height="25"
-          />
-        </button>
+        <app-copy-clipboard-btn
+          [value]="url.shortUrl"
+          className="d-table-cell d-md-none"
+          title="URL copied"
+          message="The short URL has been copied to your clipboard"
+        ></app-copy-clipboard-btn>
         <button
           type="button"
           class="btn btn-sm"
           (click)="onDisplayStats(url)"
-          title="Display URL Stats"
+          ngbTooltip="Display URL Stats"
         >
           <img
             src="/assets/img/stats.svg"
@@ -71,7 +81,7 @@
           type="button"
           class="btn btn-sm"
           (click)="onDelete(url)"
-          title="Remove Short URL"
+          ngbTooltip="Remove Short URL"
         >
           <img
             src="/assets/img/delete.svg"
