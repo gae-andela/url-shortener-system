@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T14:08:57.593Z",
+        "start_timestamp": "2023-03-16T19:55:38.037Z",
         "line": 3,
         "name": "client cannot register with bad inputs",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 19511684,
+              "duration": 16318708,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 566012050,
+              "duration": 464092852,
               "status": "passed"
             },
             "line": 5,
@@ -63,7 +63,7 @@
           },
           {
             "result": {
-              "duration": 2628925,
+              "duration": 2673818,
               "status": "passed"
             },
             "line": 10,
@@ -81,7 +81,7 @@
           },
           {
             "result": {
-              "duration": 56620535,
+              "duration": 54995661,
               "status": "passed"
             },
             "line": 11,
@@ -104,9 +104,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@auth"
           },
           {
@@ -115,7 +112,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:08:58.384Z",
+        "start_timestamp": "2023-03-16T19:55:38.810Z",
         "line": 13,
         "name": "client cannot register with used email",
         "description": "",
@@ -125,7 +122,7 @@
         "steps": [
           {
             "result": {
-              "duration": 520005,
+              "duration": 1504709,
               "status": "passed"
             },
             "line": 14,
@@ -137,7 +134,7 @@
           },
           {
             "result": {
-              "duration": 62330289,
+              "duration": 63447918,
               "status": "passed"
             },
             "line": 15,
@@ -175,7 +172,7 @@
           },
           {
             "result": {
-              "duration": 210102,
+              "duration": 208201,
               "status": "passed"
             },
             "line": 20,
@@ -193,7 +190,7 @@
           },
           {
             "result": {
-              "duration": 1441513,
+              "duration": 1741411,
               "status": "passed"
             },
             "line": 21,
@@ -216,9 +213,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@auth"
           },
           {
@@ -227,7 +221,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:08:58.465Z",
+        "start_timestamp": "2023-03-16T19:55:38.890Z",
         "line": 23,
         "name": "client can register with new email",
         "description": "",
@@ -237,7 +231,7 @@
         "steps": [
           {
             "result": {
-              "duration": 504605,
+              "duration": 617604,
               "status": "passed"
             },
             "line": 24,
@@ -249,7 +243,7 @@
           },
           {
             "result": {
-              "duration": 305471288,
+              "duration": 329750869,
               "status": "passed"
             },
             "line": 25,
@@ -287,7 +281,7 @@
           },
           {
             "result": {
-              "duration": 317103,
+              "duration": 222502,
               "status": "passed"
             },
             "line": 30,
@@ -305,21 +299,18 @@
           },
           {
             "result": {
-              "duration": 339504,
+              "duration": 360503,
               "status": "passed"
             },
             "line": 31,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
-          {
-            "name": "@DirtyContextAfter"
-          },
           {
             "name": "@auth"
           },
@@ -336,7 +327,7 @@
     "uri": "file:src/test/resources/features/01-auth-sign-up.feature",
     "tags": [
       {
-        "name": "@DirtyContextAfter",
+        "name": "@auth",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -344,19 +335,11 @@
         }
       },
       {
-        "name": "@auth",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 20
-        }
-      },
-      {
         "name": "@sign-up",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 26
+          "column": 7
         }
       }
     ]
@@ -365,7 +348,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T14:08:58.785Z",
+        "start_timestamp": "2023-03-16T19:55:39.241Z",
         "line": 3,
         "name": "client cannot login with bad inputs",
         "description": "",
@@ -375,7 +358,7 @@
         "steps": [
           {
             "result": {
-              "duration": 531305,
+              "duration": 638404,
               "status": "passed"
             },
             "line": 4,
@@ -387,7 +370,7 @@
           },
           {
             "result": {
-              "duration": 11786411,
+              "duration": 21028338,
               "status": "passed"
             },
             "line": 5,
@@ -413,7 +396,7 @@
           },
           {
             "result": {
-              "duration": 153702,
+              "duration": 197801,
               "status": "passed"
             },
             "line": 8,
@@ -431,7 +414,7 @@
           },
           {
             "result": {
-              "duration": 823608,
+              "duration": 1023106,
               "status": "passed"
             },
             "line": 9,
@@ -454,9 +437,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@auth"
           },
           {
@@ -465,7 +445,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:08:58.812Z",
+        "start_timestamp": "2023-03-16T19:55:39.295Z",
         "line": 11,
         "name": "client cannot sign in with unknown email",
         "description": "",
@@ -475,7 +455,7 @@
         "steps": [
           {
             "result": {
-              "duration": 464005,
+              "duration": 888306,
               "status": "passed"
             },
             "line": 12,
@@ -487,7 +467,7 @@
           },
           {
             "result": {
-              "duration": 6872665,
+              "duration": 13019085,
               "status": "passed"
             },
             "line": 13,
@@ -513,7 +493,7 @@
           },
           {
             "result": {
-              "duration": 128102,
+              "duration": 199701,
               "status": "passed"
             },
             "line": 16,
@@ -531,7 +511,7 @@
           },
           {
             "result": {
-              "duration": 240602,
+              "duration": 273902,
               "status": "passed"
             },
             "line": 17,
@@ -554,9 +534,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@auth"
           },
           {
@@ -565,7 +542,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:08:58.828Z",
+        "start_timestamp": "2023-03-16T19:55:39.333Z",
         "line": 19,
         "name": "client cannot sign in with bad password",
         "description": "",
@@ -575,7 +552,7 @@
         "steps": [
           {
             "result": {
-              "duration": 369204,
+              "duration": 497003,
               "status": "passed"
             },
             "line": 20,
@@ -587,7 +564,7 @@
           },
           {
             "result": {
-              "duration": 105412096,
+              "duration": 116405666,
               "status": "passed"
             },
             "line": 21,
@@ -613,7 +590,7 @@
           },
           {
             "result": {
-              "duration": 239302,
+              "duration": 232901,
               "status": "passed"
             },
             "line": 24,
@@ -631,7 +608,7 @@
           },
           {
             "result": {
-              "duration": 312103,
+              "duration": 284802,
               "status": "passed"
             },
             "line": 25,
@@ -654,9 +631,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@auth"
           },
           {
@@ -665,7 +639,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:08:58.945Z",
+        "start_timestamp": "2023-03-16T19:55:39.470Z",
         "line": 27,
         "name": "client can sign with valid email and password",
         "description": "",
@@ -675,7 +649,7 @@
         "steps": [
           {
             "result": {
-              "duration": 516805,
+              "duration": 578704,
               "status": "passed"
             },
             "line": 28,
@@ -687,7 +661,7 @@
           },
           {
             "result": {
-              "duration": 206860356,
+              "duration": 227667597,
               "status": "passed"
             },
             "line": 29,
@@ -713,7 +687,7 @@
           },
           {
             "result": {
-              "duration": 275802,
+              "duration": 268102,
               "status": "passed"
             },
             "line": 32,
@@ -731,21 +705,18 @@
           },
           {
             "result": {
-              "duration": 208902,
+              "duration": 256402,
               "status": "passed"
             },
             "line": 33,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
-          {
-            "name": "@DirtyContextAfter"
-          },
           {
             "name": "@auth"
           },
@@ -762,7 +733,7 @@
     "uri": "file:src/test/resources/features/02-auth-sign-in.feature",
     "tags": [
       {
-        "name": "@DirtyContextAfter",
+        "name": "@auth",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -770,19 +741,11 @@
         }
       },
       {
-        "name": "@auth",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 20
-        }
-      },
-      {
         "name": "@sign-in",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 26
+          "column": 7
         }
       }
     ]
@@ -791,7 +754,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T14:08:59.167Z",
+        "start_timestamp": "2023-03-16T19:55:39.716Z",
         "line": 3,
         "name": "anonymous cannot get details",
         "description": "",
@@ -801,7 +764,7 @@
         "steps": [
           {
             "result": {
-              "duration": 486705,
+              "duration": 558104,
               "status": "passed"
             },
             "line": 4,
@@ -813,7 +776,7 @@
           },
           {
             "result": {
-              "duration": 14168234,
+              "duration": 9522163,
               "status": "passed"
             },
             "line": 5,
@@ -825,7 +788,7 @@
           },
           {
             "result": {
-              "duration": 194202,
+              "duration": 165801,
               "status": "passed"
             },
             "line": 6,
@@ -843,7 +806,7 @@
           },
           {
             "result": {
-              "duration": 272103,
+              "duration": 267002,
               "status": "passed"
             },
             "line": 7,
@@ -866,9 +829,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@auth"
           },
           {
@@ -877,7 +837,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:08:59.204Z",
+        "start_timestamp": "2023-03-16T19:55:39.749Z",
         "line": 9,
         "name": "logged user can fetch its details",
         "description": "",
@@ -887,7 +847,7 @@
         "steps": [
           {
             "result": {
-              "duration": 646006,
+              "duration": 908206,
               "status": "passed"
             },
             "line": 10,
@@ -899,7 +859,7 @@
           },
           {
             "result": {
-              "duration": 195135945,
+              "duration": 223616171,
               "status": "passed"
             },
             "line": 11,
@@ -925,7 +885,7 @@
           },
           {
             "result": {
-              "duration": 173802,
+              "duration": 232501,
               "status": "passed"
             },
             "line": 14,
@@ -943,19 +903,19 @@
           },
           {
             "result": {
-              "duration": 209202,
+              "duration": 250502,
               "status": "passed"
             },
             "line": 15,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 33875020,
+              "duration": 58127282,
               "status": "passed"
             },
             "line": 16,
@@ -967,7 +927,7 @@
           },
           {
             "result": {
-              "duration": 153401,
+              "duration": 215501,
               "status": "passed"
             },
             "line": 17,
@@ -985,7 +945,7 @@
           },
           {
             "result": {
-              "duration": 318603,
+              "duration": 331003,
               "status": "passed"
             },
             "line": 18,
@@ -1007,7 +967,7 @@
           },
           {
             "result": {
-              "duration": 409304,
+              "duration": 651104,
               "status": "passed"
             },
             "line": 19,
@@ -1030,9 +990,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@auth"
           },
           {
@@ -1048,7 +1005,7 @@
     "uri": "file:src/test/resources/features/03-auth-who.feature",
     "tags": [
       {
-        "name": "@DirtyContextAfter",
+        "name": "@auth",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -1056,19 +1013,11 @@
         }
       },
       {
-        "name": "@auth",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 20
-        }
-      },
-      {
         "name": "@who",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 26
+          "column": 7
         }
       }
     ]
@@ -1077,7 +1026,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T14:08:59.454Z",
+        "start_timestamp": "2023-03-16T19:55:40.066Z",
         "line": 3,
         "name": "anonymous cannot get urls",
         "description": "",
@@ -1087,7 +1036,7 @@
         "steps": [
           {
             "result": {
-              "duration": 681007,
+              "duration": 957106,
               "status": "passed"
             },
             "line": 4,
@@ -1099,7 +1048,7 @@
           },
           {
             "result": {
-              "duration": 13880932,
+              "duration": 19406828,
               "status": "passed"
             },
             "line": 5,
@@ -1111,7 +1060,7 @@
           },
           {
             "result": {
-              "duration": 180302,
+              "duration": 274102,
               "status": "passed"
             },
             "line": 6,
@@ -1130,9 +1079,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -1144,7 +1090,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:08:59.505Z",
+        "start_timestamp": "2023-03-16T19:55:40.115Z",
         "line": 8,
         "name": "logged user can fetch urls",
         "description": "",
@@ -1154,7 +1100,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2100519,
+              "duration": 1179808,
               "status": "passed"
             },
             "line": 9,
@@ -1166,7 +1112,7 @@
           },
           {
             "result": {
-              "duration": 215230135,
+              "duration": 217523130,
               "status": "passed"
             },
             "line": 10,
@@ -1192,7 +1138,7 @@
           },
           {
             "result": {
-              "duration": 198401,
+              "duration": 184502,
               "status": "passed"
             },
             "line": 13,
@@ -1210,19 +1156,19 @@
           },
           {
             "result": {
-              "duration": 211502,
+              "duration": 226802,
               "status": "passed"
             },
             "line": 14,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 45440230,
+              "duration": 29697895,
               "status": "passed"
             },
             "line": 15,
@@ -1234,7 +1180,7 @@
           },
           {
             "result": {
-              "duration": 181202,
+              "duration": 233901,
               "status": "passed"
             },
             "line": 16,
@@ -1252,7 +1198,7 @@
           },
           {
             "result": {
-              "duration": 417804,
+              "duration": 697305,
               "status": "passed"
             },
             "line": 17,
@@ -1274,7 +1220,7 @@
           },
           {
             "result": {
-              "duration": 360503,
+              "duration": 489504,
               "status": "passed"
             },
             "line": 18,
@@ -1296,7 +1242,7 @@
           },
           {
             "result": {
-              "duration": 340304,
+              "duration": 522203,
               "status": "passed"
             },
             "line": 19,
@@ -1319,9 +1265,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -1333,7 +1276,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:08:59.790Z",
+        "start_timestamp": "2023-03-16T19:55:40.381Z",
         "line": 21,
         "name": "anonymous cannot remove urls",
         "description": "",
@@ -1343,7 +1286,7 @@
         "steps": [
           {
             "result": {
-              "duration": 607505,
+              "duration": 470003,
               "status": "passed"
             },
             "line": 22,
@@ -1355,7 +1298,7 @@
           },
           {
             "result": {
-              "duration": 6383660,
+              "duration": 4692631,
               "status": "passed"
             },
             "line": 23,
@@ -1373,7 +1316,7 @@
           },
           {
             "result": {
-              "duration": 505104,
+              "duration": 140401,
               "status": "passed"
             },
             "line": 24,
@@ -1392,9 +1335,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -1406,7 +1346,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:08:59.817Z",
+        "start_timestamp": "2023-03-16T19:55:40.399Z",
         "line": 26,
         "name": "logged user can remove urls",
         "description": "",
@@ -1416,7 +1356,7 @@
         "steps": [
           {
             "result": {
-              "duration": 652806,
+              "duration": 483303,
               "status": "passed"
             },
             "line": 27,
@@ -1428,7 +1368,7 @@
           },
           {
             "result": {
-              "duration": 223456912,
+              "duration": 208305170,
               "status": "passed"
             },
             "line": 28,
@@ -1454,7 +1394,7 @@
           },
           {
             "result": {
-              "duration": 222102,
+              "duration": 230502,
               "status": "passed"
             },
             "line": 31,
@@ -1472,19 +1412,19 @@
           },
           {
             "result": {
-              "duration": 208702,
+              "duration": 312702,
               "status": "passed"
             },
             "line": 32,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 16538156,
+              "duration": 15225800,
               "status": "passed"
             },
             "line": 33,
@@ -1502,7 +1442,7 @@
           },
           {
             "result": {
-              "duration": 445404,
+              "duration": 438303,
               "status": "passed"
             },
             "line": 34,
@@ -1521,9 +1461,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -1535,7 +1472,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:09:00.071Z",
+        "start_timestamp": "2023-03-16T19:55:40.636Z",
         "line": 36,
         "name": "anonymous cannot get urls stats",
         "description": "",
@@ -1545,7 +1482,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2392222,
+              "duration": 491703,
               "status": "passed"
             },
             "line": 37,
@@ -1557,7 +1494,7 @@
           },
           {
             "result": {
-              "duration": 5991157,
+              "duration": 4422929,
               "status": "passed"
             },
             "line": 38,
@@ -1575,7 +1512,7 @@
           },
           {
             "result": {
-              "duration": 201801,
+              "duration": 216601,
               "status": "passed"
             },
             "line": 39,
@@ -1594,9 +1531,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -1608,7 +1542,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:09:00.098Z",
+        "start_timestamp": "2023-03-16T19:55:40.652Z",
         "line": 41,
         "name": "logged user can get urls stats",
         "description": "",
@@ -1618,7 +1552,7 @@
         "steps": [
           {
             "result": {
-              "duration": 464504,
+              "duration": 461203,
               "status": "passed"
             },
             "line": 42,
@@ -1630,7 +1564,7 @@
           },
           {
             "result": {
-              "duration": 207822765,
+              "duration": 207022862,
               "status": "passed"
             },
             "line": 43,
@@ -1656,7 +1590,7 @@
           },
           {
             "result": {
-              "duration": 366103,
+              "duration": 231301,
               "status": "passed"
             },
             "line": 46,
@@ -1674,19 +1608,19 @@
           },
           {
             "result": {
-              "duration": 244402,
+              "duration": 284602,
               "status": "passed"
             },
             "line": 47,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 13274725,
+              "duration": 16850511,
               "status": "passed"
             },
             "line": 48,
@@ -1698,7 +1632,7 @@
           },
           {
             "result": {
-              "duration": 134101,
+              "duration": 131901,
               "status": "passed"
             },
             "line": 49,
@@ -1716,7 +1650,7 @@
           },
           {
             "result": {
-              "duration": 30360687,
+              "duration": 32342713,
               "status": "passed"
             },
             "line": 50,
@@ -1734,7 +1668,7 @@
           },
           {
             "result": {
-              "duration": 173202,
+              "duration": 189602,
               "status": "passed"
             },
             "line": 51,
@@ -1752,7 +1686,7 @@
           },
           {
             "result": {
-              "duration": 631906,
+              "duration": 574904,
               "status": "passed"
             },
             "line": 52,
@@ -1774,7 +1708,7 @@
           },
           {
             "result": {
-              "duration": 761407,
+              "duration": 604204,
               "status": "passed"
             },
             "line": 53,
@@ -1797,9 +1731,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -1818,7 +1749,7 @@
     "uri": "file:src/test/resources/features/04-urls-manage.feature",
     "tags": [
       {
-        "name": "@DirtyContextAfter",
+        "name": "@urls",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -1826,19 +1757,11 @@
         }
       },
       {
-        "name": "@urls",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 20
-        }
-      },
-      {
         "name": "@read",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 26
+          "column": 7
         }
       },
       {
@@ -1846,7 +1769,7 @@
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 32
+          "column": 13
         }
       }
     ]
@@ -1855,7 +1778,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T14:09:00.364Z",
+        "start_timestamp": "2023-03-16T19:55:40.922Z",
         "line": 3,
         "name": "anonymous cannot create short urls",
         "description": "",
@@ -1865,7 +1788,7 @@
         "steps": [
           {
             "result": {
-              "duration": 820408,
+              "duration": 967906,
               "status": "passed"
             },
             "line": 4,
@@ -1877,7 +1800,7 @@
           },
           {
             "result": {
-              "duration": 3785636,
+              "duration": 5045833,
               "status": "passed"
             },
             "line": 5,
@@ -1897,7 +1820,7 @@
           },
           {
             "result": {
-              "duration": 116701,
+              "duration": 129301,
               "status": "passed"
             },
             "line": 7,
@@ -1916,9 +1839,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -1927,7 +1847,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:09:00.384Z",
+        "start_timestamp": "2023-03-16T19:55:40.972Z",
         "line": 9,
         "name": "cannot create short urls with bad inputs",
         "description": "",
@@ -1937,7 +1857,7 @@
         "steps": [
           {
             "result": {
-              "duration": 344003,
+              "duration": 527104,
               "status": "passed"
             },
             "line": 10,
@@ -1949,7 +1869,7 @@
           },
           {
             "result": {
-              "duration": 204688635,
+              "duration": 218076235,
               "status": "passed"
             },
             "line": 11,
@@ -1975,7 +1895,7 @@
           },
           {
             "result": {
-              "duration": 208502,
+              "duration": 184001,
               "status": "passed"
             },
             "line": 14,
@@ -1993,19 +1913,19 @@
           },
           {
             "result": {
-              "duration": 255703,
+              "duration": 221601,
               "status": "passed"
             },
             "line": 15,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 16861160,
+              "duration": 25874870,
               "status": "passed"
             },
             "line": 16,
@@ -2025,7 +1945,7 @@
           },
           {
             "result": {
-              "duration": 153202,
+              "duration": 164001,
               "status": "passed"
             },
             "line": 18,
@@ -2044,9 +1964,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -2055,7 +1972,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:09:00.618Z",
+        "start_timestamp": "2023-03-16T19:55:41.248Z",
         "line": 20,
         "name": "logged user can create short urls",
         "description": "",
@@ -2065,7 +1982,7 @@
         "steps": [
           {
             "result": {
-              "duration": 471404,
+              "duration": 600104,
               "status": "passed"
             },
             "line": 21,
@@ -2077,7 +1994,7 @@
           },
           {
             "result": {
-              "duration": 219580776,
+              "duration": 219852946,
               "status": "passed"
             },
             "line": 22,
@@ -2103,7 +2020,7 @@
           },
           {
             "result": {
-              "duration": 244702,
+              "duration": 394902,
               "status": "passed"
             },
             "line": 25,
@@ -2121,19 +2038,19 @@
           },
           {
             "result": {
-              "duration": 215702,
+              "duration": 218001,
               "status": "passed"
             },
             "line": 26,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 18212372,
+              "duration": 17577816,
               "status": "passed"
             },
             "line": 27,
@@ -2153,7 +2070,7 @@
           },
           {
             "result": {
-              "duration": 258502,
+              "duration": 233502,
               "status": "passed"
             },
             "line": 29,
@@ -2171,7 +2088,7 @@
           },
           {
             "result": {
-              "duration": 339103,
+              "duration": 297002,
               "status": "passed"
             },
             "line": 30,
@@ -2194,9 +2111,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -2205,7 +2119,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:09:00.879Z",
+        "start_timestamp": "2023-03-16T19:55:41.498Z",
         "line": 32,
         "name": "logged user can set custom short urls",
         "description": "",
@@ -2215,7 +2129,7 @@
         "steps": [
           {
             "result": {
-              "duration": 409604,
+              "duration": 441103,
               "status": "passed"
             },
             "line": 33,
@@ -2227,7 +2141,7 @@
           },
           {
             "result": {
-              "duration": 209187278,
+              "duration": 209069875,
               "status": "passed"
             },
             "line": 34,
@@ -2253,7 +2167,7 @@
           },
           {
             "result": {
-              "duration": 180602,
+              "duration": 187502,
               "status": "passed"
             },
             "line": 37,
@@ -2271,19 +2185,19 @@
           },
           {
             "result": {
-              "duration": 208102,
+              "duration": 189101,
               "status": "passed"
             },
             "line": 38,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 21012499,
+              "duration": 29177492,
               "status": "passed"
             },
             "line": 39,
@@ -2309,7 +2223,7 @@
           },
           {
             "result": {
-              "duration": 132902,
+              "duration": 153801,
               "status": "passed"
             },
             "line": 42,
@@ -2327,7 +2241,7 @@
           },
           {
             "result": {
-              "duration": 230102,
+              "duration": 241801,
               "status": "passed"
             },
             "line": 43,
@@ -2350,9 +2264,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -2361,7 +2272,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:09:01.127Z",
+        "start_timestamp": "2023-03-16T19:55:41.750Z",
         "line": 45,
         "name": "logged user cannot use already used custom urls",
         "description": "",
@@ -2371,7 +2282,7 @@
         "steps": [
           {
             "result": {
-              "duration": 424204,
+              "duration": 450703,
               "status": "passed"
             },
             "line": 46,
@@ -2383,7 +2294,7 @@
           },
           {
             "result": {
-              "duration": 199314884,
+              "duration": 212245695,
               "status": "passed"
             },
             "line": 47,
@@ -2409,7 +2320,7 @@
           },
           {
             "result": {
-              "duration": 177401,
+              "duration": 182501,
               "status": "passed"
             },
             "line": 50,
@@ -2427,19 +2338,19 @@
           },
           {
             "result": {
-              "duration": 202402,
+              "duration": 228401,
               "status": "passed"
             },
             "line": 51,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 15831250,
+              "duration": 16466509,
               "status": "passed"
             },
             "line": 52,
@@ -2465,7 +2376,7 @@
           },
           {
             "result": {
-              "duration": 152301,
+              "duration": 157401,
               "status": "passed"
             },
             "line": 55,
@@ -2483,7 +2394,7 @@
           },
           {
             "result": {
-              "duration": 24810735,
+              "duration": 12930785,
               "status": "passed"
             },
             "line": 56,
@@ -2509,7 +2420,7 @@
           },
           {
             "result": {
-              "duration": 132001,
+              "duration": 158901,
               "status": "passed"
             },
             "line": 59,
@@ -2528,9 +2439,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -2546,7 +2454,7 @@
     "uri": "file:src/test/resources/features/05-urls-shorten.feature",
     "tags": [
       {
-        "name": "@DirtyContextAfter",
+        "name": "@urls",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -2554,19 +2462,11 @@
         }
       },
       {
-        "name": "@urls",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 20
-        }
-      },
-      {
         "name": "@shorten",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 26
+          "column": 7
         }
       }
     ]
@@ -2575,7 +2475,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T14:09:01.395Z",
+        "start_timestamp": "2023-03-16T19:55:42.009Z",
         "line": 3,
         "name": "anyone can be redirected",
         "description": "",
@@ -2585,7 +2485,7 @@
         "steps": [
           {
             "result": {
-              "duration": 507705,
+              "duration": 571504,
               "status": "passed"
             },
             "line": 4,
@@ -2597,7 +2497,7 @@
           },
           {
             "result": {
-              "duration": 214701330,
+              "duration": 208415270,
               "status": "passed"
             },
             "line": 5,
@@ -2623,7 +2523,7 @@
           },
           {
             "result": {
-              "duration": 173602,
+              "duration": 300002,
               "status": "passed"
             },
             "line": 8,
@@ -2641,19 +2541,19 @@
           },
           {
             "result": {
-              "duration": 373304,
+              "duration": 446103,
               "status": "passed"
             },
             "line": 9,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 15136343,
+              "duration": 27144678,
               "status": "passed"
             },
             "line": 10,
@@ -2673,7 +2573,7 @@
           },
           {
             "result": {
-              "duration": 139001,
+              "duration": 168601,
               "status": "passed"
             },
             "line": 12,
@@ -2691,10 +2591,22 @@
           },
           {
             "result": {
-              "duration": 20521694,
+              "duration": 83901,
               "status": "passed"
             },
             "line": 13,
+            "name": "the client remove token",
+            "match": {
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_remove_token()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23037151,
+              "status": "passed"
+            },
+            "line": 14,
             "name": "the client browses short url \"response.shortUrl\"",
             "match": {
               "arguments": [
@@ -2709,10 +2621,10 @@
           },
           {
             "result": {
-              "duration": 185301,
+              "duration": 158401,
               "status": "passed"
             },
-            "line": 14,
+            "line": 15,
             "name": "the client receives status code of 302",
             "match": {
               "arguments": [
@@ -2728,9 +2640,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -2739,8 +2648,8 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:09:01.677Z",
-        "line": 16,
+        "start_timestamp": "2023-03-16T19:55:42.293Z",
+        "line": 17,
         "name": "cannot be redirected with bad url",
         "description": "",
         "id": "any-user-can-be-redirected-via-short-urls;cannot-be-redirected-with-bad-url",
@@ -2749,10 +2658,10 @@
         "steps": [
           {
             "result": {
-              "duration": 596106,
+              "duration": 769205,
               "status": "passed"
             },
-            "line": 17,
+            "line": 18,
             "name": "the server is up",
             "match": {
               "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
@@ -2761,10 +2670,10 @@
           },
           {
             "result": {
-              "duration": 5881355,
+              "duration": 9328961,
               "status": "passed"
             },
-            "line": 18,
+            "line": 19,
             "name": "the client browses short url \"z\"",
             "match": {
               "arguments": [
@@ -2779,10 +2688,10 @@
           },
           {
             "result": {
-              "duration": 132002,
+              "duration": 158201,
               "status": "passed"
             },
-            "line": 19,
+            "line": 20,
             "name": "the client receives status code of 404",
             "match": {
               "arguments": [
@@ -2798,9 +2707,6 @@
         ],
         "tags": [
           {
-            "name": "@DirtyContextAfter"
-          },
-          {
             "name": "@urls"
           },
           {
@@ -2809,8 +2715,8 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T14:09:01.700Z",
-        "line": 21,
+        "start_timestamp": "2023-03-16T19:55:42.315Z",
+        "line": 22,
         "name": "can browse custom short urls",
         "description": "",
         "id": "any-user-can-be-redirected-via-short-urls;can-browse-custom-short-urls",
@@ -2819,10 +2725,10 @@
         "steps": [
           {
             "result": {
-              "duration": 430004,
+              "duration": 497403,
               "status": "passed"
             },
-            "line": 22,
+            "line": 23,
             "name": "the server is up",
             "match": {
               "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_server_is_up()"
@@ -2831,10 +2737,10 @@
           },
           {
             "result": {
-              "duration": 203506424,
+              "duration": 205009648,
               "status": "passed"
             },
-            "line": 23,
+            "line": 24,
             "name": "the client sign in with",
             "match": {
               "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_sign_in(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
@@ -2857,10 +2763,10 @@
           },
           {
             "result": {
-              "duration": 212902,
+              "duration": 181901,
               "status": "passed"
             },
-            "line": 26,
+            "line": 27,
             "name": "the client receives status code of 200",
             "match": {
               "arguments": [
@@ -2875,22 +2781,22 @@
           },
           {
             "result": {
-              "duration": 205202,
+              "duration": 2256115,
               "status": "passed"
             },
-            "line": 27,
+            "line": 28,
             "name": "the client register token",
             "match": {
-              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_receives_body_field_of()"
+              "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_register_token()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 25487041,
+              "duration": 25436767,
               "status": "passed"
             },
-            "line": 28,
+            "line": 29,
             "name": "the client shorten url with",
             "match": {
               "location": "com.xyz.urlshortenersystem.features.StepDefsIntegrationTest.the_client_shorten_url(java.util.Map\u003cjava.lang.String, java.lang.Object\u003e)"
@@ -2913,10 +2819,10 @@
           },
           {
             "result": {
-              "duration": 144901,
+              "duration": 170901,
               "status": "passed"
             },
-            "line": 31,
+            "line": 32,
             "name": "the client receives status code of 201",
             "match": {
               "arguments": [
@@ -2931,10 +2837,10 @@
           },
           {
             "result": {
-              "duration": 312403,
+              "duration": 294602,
               "status": "passed"
             },
-            "line": 32,
+            "line": 33,
             "name": "the client receives body field \"shortUrl\" of \"cust.wonders\"",
             "match": {
               "arguments": [
@@ -2953,10 +2859,10 @@
           },
           {
             "result": {
-              "duration": 11076505,
+              "duration": 24555462,
               "status": "passed"
             },
-            "line": 33,
+            "line": 34,
             "name": "the client browses short url \"cust.wonders\"",
             "match": {
               "arguments": [
@@ -2971,10 +2877,10 @@
           },
           {
             "result": {
-              "duration": 118501,
+              "duration": 147400,
               "status": "passed"
             },
-            "line": 34,
+            "line": 35,
             "name": "the client receives status code of 302",
             "match": {
               "arguments": [
@@ -2989,9 +2895,6 @@
           }
         ],
         "tags": [
-          {
-            "name": "@DirtyContextAfter"
-          },
           {
             "name": "@urls"
           },
@@ -3008,7 +2911,7 @@
     "uri": "file:src/test/resources/features/06-urls-redirect.feature",
     "tags": [
       {
-        "name": "@DirtyContextAfter",
+        "name": "@urls",
         "type": "Tag",
         "location": {
           "line": 1,
@@ -3016,19 +2919,11 @@
         }
       },
       {
-        "name": "@urls",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 20
-        }
-      },
-      {
         "name": "@redirect",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 26
+          "column": 7
         }
       }
     ]

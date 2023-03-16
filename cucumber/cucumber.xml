@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="23" time="6.25">
-    <testcase classname="the user can authenticate" name="client cannot register with bad inputs" time="0.761">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="23" time="6.497">
+    <testcase classname="the user can authenticate" name="client cannot register with bad inputs" time="0.74">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client register with...............................................passed
 Then the client receives status code of 400.................................passed
 And the client receives body field "message" of "Validation Errors".........passed
 ]]></system-out>
     </testcase>
-    <testcase classname="the user can authenticate" name="client cannot register with used email" time="0.067">
+    <testcase classname="the user can authenticate" name="client cannot register with used email" time="0.07">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client register with...............................................passed
 Then the client receives status code of 400.................................passed
 And the client receives body field "errors[0]" of "Email already exists"....passed
 ]]></system-out>
     </testcase>
-    <testcase classname="the user can authenticate" name="client can register with new email" time="0.309">
+    <testcase classname="the user can authenticate" name="client can register with new email" time="0.333">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client register with...............................................passed
 Then the client receives status code of 201.................................passed
 And the client register token...............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="the user can login" name="client cannot login with bad inputs" time="0.019">
+    <testcase classname="the user can login" name="client cannot login with bad inputs" time="0.037">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 Then the client receives status code of 401.................................passed
 And the client receives body field "message" of "Authentication Error"......passed
 ]]></system-out>
     </testcase>
-    <testcase classname="the user can login" name="client cannot sign in with unknown email" time="0.009">
+    <testcase classname="the user can login" name="client cannot sign in with unknown email" time="0.018">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 Then the client receives status code of 401.................................passed
 And the client receives body field "errors[0]" of "Invalid username/password".passed
 ]]></system-out>
     </testcase>
-    <testcase classname="the user can login" name="client cannot sign in with bad password" time="0.108">
+    <testcase classname="the user can login" name="client cannot sign in with bad password" time="0.122">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 Then the client receives status code of 401.................................passed
 And the client receives body field "errors[0]" of "Invalid username/password".passed
 ]]></system-out>
     </testcase>
-    <testcase classname="the user can login" name="client can sign with valid email and password" time="0.209">
+    <testcase classname="the user can login" name="client can sign with valid email and password" time="0.237">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 Then the client receives status code of 200.................................passed
 And the client register token...............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can fetch its details" name="anonymous cannot get details" time="0.021">
+    <testcase classname="a logged user can fetch its details" name="anonymous cannot get details" time="0.016">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client get current user............................................passed
 Then the client receives status code of 401.................................passed
 And the client receives body field "message" of "Authentication Error"......passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can fetch its details" name="logged user can fetch its details" time="0.233">
+    <testcase classname="a logged user can fetch its details" name="logged user can fetch its details" time="0.288">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 And the client receives status code of 200..................................passed
@@ -67,13 +67,13 @@ And the client receives body field "email" of "root@xyz.com"................pass
 And the client receives body field "password" is null "true"................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can fetch its urls and manage it" name="anonymous cannot get urls" time="0.034">
+    <testcase classname="a logged user can fetch its urls and manage it" name="anonymous cannot get urls" time="0.033">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client fetch urls..................................................passed
 Then the client receives status code of 401.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can fetch its urls and manage it" name="logged user can fetch urls" time="0.269">
+    <testcase classname="a logged user can fetch its urls and manage it" name="logged user can fetch urls" time="0.258">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 And the client receives status code of 200..................................passed
@@ -85,13 +85,13 @@ And the client receives body field "[0].longUrl" is null "false"............pass
 And the client receives body field "[0].shortUrl" is null "false"...........passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can fetch its urls and manage it" name="anonymous cannot remove urls" time="0.009">
+    <testcase classname="a logged user can fetch its urls and manage it" name="anonymous cannot remove urls" time="0.006">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client removes url with ID "2".....................................passed
 Then the client receives status code of 401.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can fetch its urls and manage it" name="logged user can remove urls" time="0.244">
+    <testcase classname="a logged user can fetch its urls and manage it" name="logged user can remove urls" time="0.227">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 And the client receives status code of 200..................................passed
@@ -100,13 +100,13 @@ When the client removes url with ID "2".....................................pass
 Then the client receives status code of 204.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can fetch its urls and manage it" name="anonymous cannot get urls stats" time="0.011">
+    <testcase classname="a logged user can fetch its urls and manage it" name="anonymous cannot get urls stats" time="0.006">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client fetch stats of urls "1".....................................passed
 Then the client receives status code of 401.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can fetch its urls and manage it" name="logged user can get urls stats" time="0.257">
+    <testcase classname="a logged user can fetch its urls and manage it" name="logged user can get urls stats" time="0.262">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 And the client receives status code of 200..................................passed
@@ -119,13 +119,13 @@ And the client receives body field "[0].id" of "1"..........................pass
 And the client receives body field "[0].ip" of "0.0.0.0"....................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can create short urls" name="anonymous cannot create short urls" time="0.012">
+    <testcase classname="a logged user can create short urls" name="anonymous cannot create short urls" time="0.016">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client shorten url with............................................passed
 Then the client receives status code of 401.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can create short urls" name="cannot create short urls with bad inputs" time="0.225">
+    <testcase classname="a logged user can create short urls" name="cannot create short urls with bad inputs" time="0.247">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 And the client receives status code of 200..................................passed
@@ -134,7 +134,7 @@ And the client shorten url with.............................................pass
 Then the client receives status code of 400.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can create short urls" name="logged user can create short urls" time="0.242">
+    <testcase classname="a logged user can create short urls" name="logged user can create short urls" time="0.241">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 And the client receives status code of 200..................................passed
@@ -144,7 +144,7 @@ Then the client receives status code of 201.................................pass
 And the client receives body field "shortUrl" is null "false"...............passed
 ]]></system-out>
     </testcase>
-    <testcase classname="a logged user can create short urls" name="logged user can set custom short urls" time="0.233">
+    <testcase classname="a logged user can create short urls" name="logged user can set custom short urls" time="0.242">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 And the client receives status code of 200..................................passed
@@ -165,24 +165,25 @@ And the client shorten url with.............................................pass
 Then the client receives status code of 400.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="any user can be redirected via short urls" name="anyone can be redirected" time="0.273">
+    <testcase classname="any user can be redirected via short urls" name="anyone can be redirected" time="0.269">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 And the client receives status code of 200..................................passed
 And the client register token...............................................passed
 And the client shorten url with.............................................passed
 And the client receives status code of 201..................................passed
+And the client remove token.................................................passed
 Then the client browses short url "response.shortUrl".......................passed
 Then the client receives status code of 302.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="any user can be redirected via short urls" name="cannot be redirected with bad url" time="0.011">
+    <testcase classname="any user can be redirected via short urls" name="cannot be redirected with bad url" time="0.012">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client browses short url "z".......................................passed
 Then the client receives status code of 404.................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="any user can be redirected via short urls" name="can browse custom short urls" time="0.243">
+    <testcase classname="any user can be redirected via short urls" name="can browse custom short urls" time="0.262">
         <system-out><![CDATA[Given the server is up......................................................passed
 When the client sign in with................................................passed
 And the client receives status code of 200..................................passed
