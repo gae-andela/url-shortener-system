@@ -21,11 +21,17 @@ jobs:
         working-directory: ./api
         run: |
           mvn clean install
-          touch target/.nojekyll
+          mkdir out
+          mkdir out/jacoco
+          mkdir out/cucumber
+          touch out/.nojekyll
+          cp -r target/site/jacoco/* out/jacoco
+          cp -r target/cucumber-reports/* out/cucumber
+          cp ../reporting/index.html out/index.html
 
       - name: Deploy
         # configure an external GitHub Pages deploy workflow here
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: reporting
-          folder: api/target/site/jacoco
+          folder: api/out
