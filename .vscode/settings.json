@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["cust", "jacoco", "nojekyll", "temurin"]
+  "cSpell.words": ["cust", "jacoco", "nojekyll", "temurin"],
+  "java.configuration.updateBuildConfiguration": "interactive"
 }
