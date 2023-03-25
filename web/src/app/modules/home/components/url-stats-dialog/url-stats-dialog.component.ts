@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { UrlsService } from '@src/core/services/api';
 import { UserUrl, UserUrlStats } from '@src/types/models';
+import { ChartType } from 'chart.js';
 
 @Component({
   selector: 'app-url-stats-dialog',
@@ -13,6 +14,13 @@ export class UrlStatsDialogComponent {
   chartOptions: any = {
     responsive: true,
     maintainAspectRatio: false,
+  };
+  chartType: ChartType = 'polarArea';
+  chartTypes: ChartType[] = ['polarArea', 'pie', 'radar'];
+  chartTypesNames: Record<string, string> = {
+    polarArea: 'Polar area',
+    pie: 'Pie',
+    radar: 'Radar',
   };
   chartLabels: string[] = [];
   chartData: any = [{ data: [], label: 'N/A' }];
@@ -34,6 +42,10 @@ export class UrlStatsDialogComponent {
 
   onClose(): void {
     this.activeModal.close();
+  }
+
+  onChangeType(chartType: ChartType): void {
+    this.chartType = chartType;
   }
 
   private _fetchStats(): void {

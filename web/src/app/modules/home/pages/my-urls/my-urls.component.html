@@ -46,9 +46,9 @@
         ></app-copy-clipboard-btn>
       </td>
       <td class="d-none d-md-table-cell">
-        <span [ngbTooltip]="url.shortUrl">
-          {{ url.shortUrl | truncate : true }}
-        </span>
+        <a target="_blank" [ngbTooltip]="url.shortUrl" [href]="url.shortUrl">{{
+          url.shortUrl | truncate : true
+        }}</a>
         <app-copy-clipboard-btn
           [value]="url.shortUrl"
           title="URL copied"

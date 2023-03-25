@@ -12,10 +12,35 @@
     Find below the statistics we collected on your short URL for
     <span class="text-info">{{ userUrl ? userUrl.longUrl : "N/A" }}</span>
   </p>
+  <div
+    class="d-flex flex-content-justify"
+    ngbDropdown
+    #typeSelect="ngbDropdown"
+  >
+    <button
+      type="button"
+      class="btn btn-outline-primary mx-auto"
+      id="dropdownTypeSelect"
+      ngbDropdownAnchor
+      (focus)="typeSelect.open()"
+    >
+      {{ chartTypesNames[chartType] }}
+    </button>
+    <div ngbDropdownMenu aria-labelledby="dropdownTypeSelect">
+      <button
+        ngbDropdownItem
+        *ngFor="let type of chartTypes"
+        (click)="onChangeType(type)"
+      >
+        {{ chartTypesNames[type] }}
+      </button>
+    </div>
+  </div>
+  <hr />
   <div class="col-12" style="height: 60vh">
     <canvas
       baseChart
-      type="radar"
+      [type]="chartType"
       [datasets]="chartData"
       [labels]="chartLabels"
       [options]="chartOptions"

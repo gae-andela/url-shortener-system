@@ -3,7 +3,7 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgChartsModule } from 'ng2-charts';
 
 import { UrlStatsDialogComponent } from './url-stats-dialog.component';
@@ -16,7 +16,7 @@ describe('UrlStatsDialogComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       providers: [NgbActiveModal],
-      imports: [HttpClientTestingModule, NgChartsModule],
+      imports: [HttpClientTestingModule, NgChartsModule, NgbModule],
       declarations: [UrlStatsDialogComponent],
     }).compileComponents();
     httpTestingController = TestBed.inject(HttpTestingController);

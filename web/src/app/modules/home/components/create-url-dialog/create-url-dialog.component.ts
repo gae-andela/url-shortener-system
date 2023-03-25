@@ -51,7 +51,8 @@ export class CreateUrlDialogComponent extends WithForm() {
             type: ToastType.info,
           });
         };
-        copyToClipboard(userUrl.shortUrl, callback);
+        const fullUrl = [redirectUrlRoot(), userUrl.shortUrl].join('/');
+        copyToClipboard(fullUrl, callback);
         this.onClose(userUrl);
       });
   }
@@ -59,7 +60,7 @@ export class CreateUrlDialogComponent extends WithForm() {
   private _createForm(): FormGroup {
     // URL regex for validating user input
     const urlRegex = new RegExp(
-      '^(http[s]?:\\/\\/(www\\.)?|ftp:\\/\\/(www\\.)?|www\\.){1}([0-9A-Za-z-\\.@:%_+~#=]+)+((\\.[a-zA-Z]{2,3})+)(/(.)*)?(\\?(.)*)?'
+      '^(http[s]?://(www.)?|ftp://(www.)?|www.){1}(.+)*?$'
     );
 
     return this._formBuilder.group({

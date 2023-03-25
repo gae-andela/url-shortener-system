@@ -15,7 +15,7 @@ public class InputConversionServiceImpl implements InputConversionService {
 	 */
 	private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	private static final char[] ALLOWED_CHARACTERS = ALPHABET.toCharArray();
-	private static int BASE_LENGTH = ALLOWED_CHARACTERS.length;
+	private static double BASE_LENGTH = ALLOWED_CHARACTERS.length;
 
 	@Override
 	public String encode(long input) {

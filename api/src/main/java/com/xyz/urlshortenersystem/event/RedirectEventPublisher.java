@@ -1,5 +1,7 @@
 package com.xyz.urlshortenersystem.event;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
@@ -19,7 +21,8 @@ public class RedirectEventPublisher {
 	 */
 	public void publish(final UserUrl userUrl) {
 		var request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
-		var event = new RedirectEvent(this, request.getRemoteHost(), request.getRemoteAddr(), userUrl);
+		var referrer = Optional.ofNullable(request.getHeader("Referer")).orElse(request.getRemoteHost());
+		var event = new RedirectEvent(this, referrer, request.getRemoteAddr(), userUrl);
 		applicationEventPublisher.publishEvent(event);
 	}
 }
