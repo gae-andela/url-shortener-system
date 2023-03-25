@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T19:55:38.037Z",
+        "start_timestamp": "2023-03-25T00:05:16.893Z",
         "line": 3,
         "name": "client cannot register with bad inputs",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 16318708,
+              "duration": 14635243,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 464092852,
+              "duration": 411926157,
               "status": "passed"
             },
             "line": 5,
@@ -63,7 +63,7 @@
           },
           {
             "result": {
-              "duration": 2673818,
+              "duration": 2364139,
               "status": "passed"
             },
             "line": 10,
@@ -81,7 +81,7 @@
           },
           {
             "result": {
-              "duration": 54995661,
+              "duration": 45440556,
               "status": "passed"
             },
             "line": 11,
@@ -112,7 +112,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:38.810Z",
+        "start_timestamp": "2023-03-25T00:05:17.509Z",
         "line": 13,
         "name": "client cannot register with used email",
         "description": "",
@@ -122,7 +122,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1504709,
+              "duration": 577010,
               "status": "passed"
             },
             "line": 14,
@@ -134,7 +134,7 @@
           },
           {
             "result": {
-              "duration": 63447918,
+              "duration": 47629793,
               "status": "passed"
             },
             "line": 15,
@@ -172,7 +172,7 @@
           },
           {
             "result": {
-              "duration": 208201,
+              "duration": 167403,
               "status": "passed"
             },
             "line": 20,
@@ -190,7 +190,7 @@
           },
           {
             "result": {
-              "duration": 1741411,
+              "duration": 1322422,
               "status": "passed"
             },
             "line": 21,
@@ -221,7 +221,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:38.890Z",
+        "start_timestamp": "2023-03-25T00:05:17.568Z",
         "line": 23,
         "name": "client can register with new email",
         "description": "",
@@ -231,7 +231,7 @@
         "steps": [
           {
             "result": {
-              "duration": 617604,
+              "duration": 469108,
               "status": "passed"
             },
             "line": 24,
@@ -243,7 +243,7 @@
           },
           {
             "result": {
-              "duration": 329750869,
+              "duration": 265555120,
               "status": "passed"
             },
             "line": 25,
@@ -281,7 +281,7 @@
           },
           {
             "result": {
-              "duration": 222502,
+              "duration": 205003,
               "status": "passed"
             },
             "line": 30,
@@ -299,7 +299,7 @@
           },
           {
             "result": {
-              "duration": 360503,
+              "duration": 375906,
               "status": "passed"
             },
             "line": 31,
@@ -348,7 +348,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T19:55:39.241Z",
+        "start_timestamp": "2023-03-25T00:05:17.846Z",
         "line": 3,
         "name": "client cannot login with bad inputs",
         "description": "",
@@ -358,7 +358,7 @@
         "steps": [
           {
             "result": {
-              "duration": 638404,
+              "duration": 485608,
               "status": "passed"
             },
             "line": 4,
@@ -370,7 +370,7 @@
           },
           {
             "result": {
-              "duration": 21028338,
+              "duration": 11461591,
               "status": "passed"
             },
             "line": 5,
@@ -396,7 +396,7 @@
           },
           {
             "result": {
-              "duration": 197801,
+              "duration": 158403,
               "status": "passed"
             },
             "line": 8,
@@ -414,7 +414,7 @@
           },
           {
             "result": {
-              "duration": 1023106,
+              "duration": 699612,
               "status": "passed"
             },
             "line": 9,
@@ -445,7 +445,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:39.295Z",
+        "start_timestamp": "2023-03-25T00:05:17.871Z",
         "line": 11,
         "name": "client cannot sign in with unknown email",
         "description": "",
@@ -455,7 +455,7 @@
         "steps": [
           {
             "result": {
-              "duration": 888306,
+              "duration": 535009,
               "status": "passed"
             },
             "line": 12,
@@ -467,7 +467,7 @@
           },
           {
             "result": {
-              "duration": 13019085,
+              "duration": 8085435,
               "status": "passed"
             },
             "line": 13,
@@ -493,7 +493,7 @@
           },
           {
             "result": {
-              "duration": 199701,
+              "duration": 126802,
               "status": "passed"
             },
             "line": 16,
@@ -511,7 +511,7 @@
           },
           {
             "result": {
-              "duration": 273902,
+              "duration": 229804,
               "status": "passed"
             },
             "line": 17,
@@ -542,7 +542,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:39.333Z",
+        "start_timestamp": "2023-03-25T00:05:17.888Z",
         "line": 19,
         "name": "client cannot sign in with bad password",
         "description": "",
@@ -552,7 +552,7 @@
         "steps": [
           {
             "result": {
-              "duration": 497003,
+              "duration": 390306,
               "status": "passed"
             },
             "line": 20,
@@ -564,7 +564,7 @@
           },
           {
             "result": {
-              "duration": 116405666,
+              "duration": 88064265,
               "status": "passed"
             },
             "line": 21,
@@ -590,7 +590,7 @@
           },
           {
             "result": {
-              "duration": 232901,
+              "duration": 235404,
               "status": "passed"
             },
             "line": 24,
@@ -608,7 +608,7 @@
           },
           {
             "result": {
-              "duration": 284802,
+              "duration": 247204,
               "status": "passed"
             },
             "line": 25,
@@ -639,7 +639,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:39.470Z",
+        "start_timestamp": "2023-03-25T00:05:17.986Z",
         "line": 27,
         "name": "client can sign with valid email and password",
         "description": "",
@@ -649,7 +649,7 @@
         "steps": [
           {
             "result": {
-              "duration": 578704,
+              "duration": 412907,
               "status": "passed"
             },
             "line": 28,
@@ -661,7 +661,7 @@
           },
           {
             "result": {
-              "duration": 227667597,
+              "duration": 172673874,
               "status": "passed"
             },
             "line": 29,
@@ -687,7 +687,7 @@
           },
           {
             "result": {
-              "duration": 268102,
+              "duration": 207404,
               "status": "passed"
             },
             "line": 32,
@@ -705,7 +705,7 @@
           },
           {
             "result": {
-              "duration": 256402,
+              "duration": 206304,
               "status": "passed"
             },
             "line": 33,
@@ -754,7 +754,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T19:55:39.716Z",
+        "start_timestamp": "2023-03-25T00:05:18.169Z",
         "line": 3,
         "name": "anonymous cannot get details",
         "description": "",
@@ -764,7 +764,7 @@
         "steps": [
           {
             "result": {
-              "duration": 558104,
+              "duration": 437308,
               "status": "passed"
             },
             "line": 4,
@@ -776,7 +776,7 @@
           },
           {
             "result": {
-              "duration": 9522163,
+              "duration": 6524609,
               "status": "passed"
             },
             "line": 5,
@@ -788,7 +788,7 @@
           },
           {
             "result": {
-              "duration": 165801,
+              "duration": 131702,
               "status": "passed"
             },
             "line": 6,
@@ -806,7 +806,7 @@
           },
           {
             "result": {
-              "duration": 267002,
+              "duration": 204803,
               "status": "passed"
             },
             "line": 7,
@@ -837,7 +837,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:39.749Z",
+        "start_timestamp": "2023-03-25T00:05:18.186Z",
         "line": 9,
         "name": "logged user can fetch its details",
         "description": "",
@@ -847,7 +847,7 @@
         "steps": [
           {
             "result": {
-              "duration": 908206,
+              "duration": 404007,
               "status": "passed"
             },
             "line": 10,
@@ -859,7 +859,7 @@
           },
           {
             "result": {
-              "duration": 223616171,
+              "duration": 172040964,
               "status": "passed"
             },
             "line": 11,
@@ -885,7 +885,7 @@
           },
           {
             "result": {
-              "duration": 232501,
+              "duration": 173603,
               "status": "passed"
             },
             "line": 14,
@@ -903,7 +903,7 @@
           },
           {
             "result": {
-              "duration": 250502,
+              "duration": 183603,
               "status": "passed"
             },
             "line": 15,
@@ -915,7 +915,7 @@
           },
           {
             "result": {
-              "duration": 58127282,
+              "duration": 30739411,
               "status": "passed"
             },
             "line": 16,
@@ -927,7 +927,7 @@
           },
           {
             "result": {
-              "duration": 215501,
+              "duration": 148302,
               "status": "passed"
             },
             "line": 17,
@@ -945,7 +945,7 @@
           },
           {
             "result": {
-              "duration": 331003,
+              "duration": 272005,
               "status": "passed"
             },
             "line": 18,
@@ -967,7 +967,7 @@
           },
           {
             "result": {
-              "duration": 651104,
+              "duration": 270504,
               "status": "passed"
             },
             "line": 19,
@@ -1026,7 +1026,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T19:55:40.066Z",
+        "start_timestamp": "2023-03-25T00:05:18.403Z",
         "line": 3,
         "name": "anonymous cannot get urls",
         "description": "",
@@ -1036,7 +1036,7 @@
         "steps": [
           {
             "result": {
-              "duration": 957106,
+              "duration": 502409,
               "status": "passed"
             },
             "line": 4,
@@ -1048,7 +1048,7 @@
           },
           {
             "result": {
-              "duration": 19406828,
+              "duration": 11660694,
               "status": "passed"
             },
             "line": 5,
@@ -1060,7 +1060,7 @@
           },
           {
             "result": {
-              "duration": 274102,
+              "duration": 160803,
               "status": "passed"
             },
             "line": 6,
@@ -1090,7 +1090,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:40.115Z",
+        "start_timestamp": "2023-03-25T00:05:18.430Z",
         "line": 8,
         "name": "logged user can fetch urls",
         "description": "",
@@ -1100,7 +1100,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1179808,
+              "duration": 1304021,
               "status": "passed"
             },
             "line": 9,
@@ -1112,7 +1112,7 @@
           },
           {
             "result": {
-              "duration": 217523130,
+              "duration": 171664957,
               "status": "passed"
             },
             "line": 10,
@@ -1138,7 +1138,7 @@
           },
           {
             "result": {
-              "duration": 184502,
+              "duration": 160603,
               "status": "passed"
             },
             "line": 13,
@@ -1156,7 +1156,7 @@
           },
           {
             "result": {
-              "duration": 226802,
+              "duration": 181203,
               "status": "passed"
             },
             "line": 14,
@@ -1168,7 +1168,7 @@
           },
           {
             "result": {
-              "duration": 29697895,
+              "duration": 18901214,
               "status": "passed"
             },
             "line": 15,
@@ -1180,7 +1180,7 @@
           },
           {
             "result": {
-              "duration": 233901,
+              "duration": 133903,
               "status": "passed"
             },
             "line": 16,
@@ -1198,7 +1198,7 @@
           },
           {
             "result": {
-              "duration": 697305,
+              "duration": 364506,
               "status": "passed"
             },
             "line": 17,
@@ -1220,7 +1220,7 @@
           },
           {
             "result": {
-              "duration": 489504,
+              "duration": 301005,
               "status": "passed"
             },
             "line": 18,
@@ -1242,7 +1242,7 @@
           },
           {
             "result": {
-              "duration": 522203,
+              "duration": 289805,
               "status": "passed"
             },
             "line": 19,
@@ -1276,7 +1276,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:40.381Z",
+        "start_timestamp": "2023-03-25T00:05:18.632Z",
         "line": 21,
         "name": "anonymous cannot remove urls",
         "description": "",
@@ -1286,7 +1286,7 @@
         "steps": [
           {
             "result": {
-              "duration": 470003,
+              "duration": 401506,
               "status": "passed"
             },
             "line": 22,
@@ -1298,7 +1298,7 @@
           },
           {
             "result": {
-              "duration": 4692631,
+              "duration": 3686861,
               "status": "passed"
             },
             "line": 23,
@@ -1316,7 +1316,7 @@
           },
           {
             "result": {
-              "duration": 140401,
+              "duration": 101002,
               "status": "passed"
             },
             "line": 24,
@@ -1346,7 +1346,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:40.399Z",
+        "start_timestamp": "2023-03-25T00:05:18.643Z",
         "line": 26,
         "name": "logged user can remove urls",
         "description": "",
@@ -1356,7 +1356,7 @@
         "steps": [
           {
             "result": {
-              "duration": 483303,
+              "duration": 351806,
               "status": "passed"
             },
             "line": 27,
@@ -1368,7 +1368,7 @@
           },
           {
             "result": {
-              "duration": 208305170,
+              "duration": 171412053,
               "status": "passed"
             },
             "line": 28,
@@ -1394,7 +1394,7 @@
           },
           {
             "result": {
-              "duration": 230502,
+              "duration": 158402,
               "status": "passed"
             },
             "line": 31,
@@ -1412,7 +1412,7 @@
           },
           {
             "result": {
-              "duration": 312702,
+              "duration": 183803,
               "status": "passed"
             },
             "line": 32,
@@ -1424,7 +1424,7 @@
           },
           {
             "result": {
-              "duration": 15225800,
+              "duration": 12889815,
               "status": "passed"
             },
             "line": 33,
@@ -1442,7 +1442,7 @@
           },
           {
             "result": {
-              "duration": 438303,
+              "duration": 366406,
               "status": "passed"
             },
             "line": 34,
@@ -1472,7 +1472,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:40.636Z",
+        "start_timestamp": "2023-03-25T00:05:18.836Z",
         "line": 36,
         "name": "anonymous cannot get urls stats",
         "description": "",
@@ -1482,7 +1482,7 @@
         "steps": [
           {
             "result": {
-              "duration": 491703,
+              "duration": 413007,
               "status": "passed"
             },
             "line": 37,
@@ -1494,7 +1494,7 @@
           },
           {
             "result": {
-              "duration": 4422929,
+              "duration": 3609660,
               "status": "passed"
             },
             "line": 38,
@@ -1512,7 +1512,7 @@
           },
           {
             "result": {
-              "duration": 216601,
+              "duration": 110801,
               "status": "passed"
             },
             "line": 39,
@@ -1542,7 +1542,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:40.652Z",
+        "start_timestamp": "2023-03-25T00:05:18.847Z",
         "line": 41,
         "name": "logged user can get urls stats",
         "description": "",
@@ -1552,7 +1552,7 @@
         "steps": [
           {
             "result": {
-              "duration": 461203,
+              "duration": 367107,
               "status": "passed"
             },
             "line": 42,
@@ -1564,7 +1564,7 @@
           },
           {
             "result": {
-              "duration": 207022862,
+              "duration": 171182899,
               "status": "passed"
             },
             "line": 43,
@@ -1590,7 +1590,7 @@
           },
           {
             "result": {
-              "duration": 231301,
+              "duration": 174403,
               "status": "passed"
             },
             "line": 46,
@@ -1608,7 +1608,7 @@
           },
           {
             "result": {
-              "duration": 284602,
+              "duration": 232604,
               "status": "passed"
             },
             "line": 47,
@@ -1620,7 +1620,7 @@
           },
           {
             "result": {
-              "duration": 16850511,
+              "duration": 12448902,
               "status": "passed"
             },
             "line": 48,
@@ -1632,7 +1632,7 @@
           },
           {
             "result": {
-              "duration": 131901,
+              "duration": 101602,
               "status": "passed"
             },
             "line": 49,
@@ -1650,7 +1650,7 @@
           },
           {
             "result": {
-              "duration": 32342713,
+              "duration": 23139474,
               "status": "passed"
             },
             "line": 50,
@@ -1668,7 +1668,7 @@
           },
           {
             "result": {
-              "duration": 189602,
+              "duration": 116002,
               "status": "passed"
             },
             "line": 51,
@@ -1686,7 +1686,7 @@
           },
           {
             "result": {
-              "duration": 574904,
+              "duration": 484108,
               "status": "passed"
             },
             "line": 52,
@@ -1708,7 +1708,7 @@
           },
           {
             "result": {
-              "duration": 604204,
+              "duration": 535109,
               "status": "passed"
             },
             "line": 53,
@@ -1778,7 +1778,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T19:55:40.922Z",
+        "start_timestamp": "2023-03-25T00:05:19.065Z",
         "line": 3,
         "name": "anonymous cannot create short urls",
         "description": "",
@@ -1788,7 +1788,7 @@
         "steps": [
           {
             "result": {
-              "duration": 967906,
+              "duration": 743812,
               "status": "passed"
             },
             "line": 4,
@@ -1800,7 +1800,7 @@
           },
           {
             "result": {
-              "duration": 5045833,
+              "duration": 3301554,
               "status": "passed"
             },
             "line": 5,
@@ -1820,7 +1820,7 @@
           },
           {
             "result": {
-              "duration": 129301,
+              "duration": 95701,
               "status": "passed"
             },
             "line": 7,
@@ -1847,7 +1847,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:40.972Z",
+        "start_timestamp": "2023-03-25T00:05:19.085Z",
         "line": 9,
         "name": "cannot create short urls with bad inputs",
         "description": "",
@@ -1857,7 +1857,7 @@
         "steps": [
           {
             "result": {
-              "duration": 527104,
+              "duration": 418407,
               "status": "passed"
             },
             "line": 10,
@@ -1869,7 +1869,7 @@
           },
           {
             "result": {
-              "duration": 218076235,
+              "duration": 181992842,
               "status": "passed"
             },
             "line": 11,
@@ -1895,7 +1895,7 @@
           },
           {
             "result": {
-              "duration": 184001,
+              "duration": 163803,
               "status": "passed"
             },
             "line": 14,
@@ -1913,7 +1913,7 @@
           },
           {
             "result": {
-              "duration": 221601,
+              "duration": 228504,
               "status": "passed"
             },
             "line": 15,
@@ -1925,7 +1925,7 @@
           },
           {
             "result": {
-              "duration": 25874870,
+              "duration": 14540135,
               "status": "passed"
             },
             "line": 16,
@@ -1945,7 +1945,7 @@
           },
           {
             "result": {
-              "duration": 164001,
+              "duration": 109601,
               "status": "passed"
             },
             "line": 18,
@@ -1972,7 +1972,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:41.248Z",
+        "start_timestamp": "2023-03-25T00:05:19.291Z",
         "line": 20,
         "name": "logged user can create short urls",
         "description": "",
@@ -1982,7 +1982,7 @@
         "steps": [
           {
             "result": {
-              "duration": 600104,
+              "duration": 384606,
               "status": "passed"
             },
             "line": 21,
@@ -1994,7 +1994,7 @@
           },
           {
             "result": {
-              "duration": 219852946,
+              "duration": 181092727,
               "status": "passed"
             },
             "line": 22,
@@ -2020,7 +2020,7 @@
           },
           {
             "result": {
-              "duration": 394902,
+              "duration": 203003,
               "status": "passed"
             },
             "line": 25,
@@ -2038,7 +2038,7 @@
           },
           {
             "result": {
-              "duration": 218001,
+              "duration": 178003,
               "status": "passed"
             },
             "line": 26,
@@ -2050,7 +2050,7 @@
           },
           {
             "result": {
-              "duration": 17577816,
+              "duration": 14921441,
               "status": "passed"
             },
             "line": 27,
@@ -2070,7 +2070,7 @@
           },
           {
             "result": {
-              "duration": 233502,
+              "duration": 113102,
               "status": "passed"
             },
             "line": 29,
@@ -2088,7 +2088,7 @@
           },
           {
             "result": {
-              "duration": 297002,
+              "duration": 258404,
               "status": "passed"
             },
             "line": 30,
@@ -2119,7 +2119,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:41.498Z",
+        "start_timestamp": "2023-03-25T00:05:19.498Z",
         "line": 32,
         "name": "logged user can set custom short urls",
         "description": "",
@@ -2129,7 +2129,7 @@
         "steps": [
           {
             "result": {
-              "duration": 441103,
+              "duration": 394107,
               "status": "passed"
             },
             "line": 33,
@@ -2141,7 +2141,7 @@
           },
           {
             "result": {
-              "duration": 209069875,
+              "duration": 170248752,
               "status": "passed"
             },
             "line": 34,
@@ -2167,7 +2167,7 @@
           },
           {
             "result": {
-              "duration": 187502,
+              "duration": 182103,
               "status": "passed"
             },
             "line": 37,
@@ -2185,7 +2185,7 @@
           },
           {
             "result": {
-              "duration": 189101,
+              "duration": 223903,
               "status": "passed"
             },
             "line": 38,
@@ -2197,7 +2197,7 @@
           },
           {
             "result": {
-              "duration": 29177492,
+              "duration": 22225459,
               "status": "passed"
             },
             "line": 39,
@@ -2223,7 +2223,7 @@
           },
           {
             "result": {
-              "duration": 153801,
+              "duration": 130502,
               "status": "passed"
             },
             "line": 42,
@@ -2241,7 +2241,7 @@
           },
           {
             "result": {
-              "duration": 241801,
+              "duration": 206503,
               "status": "passed"
             },
             "line": 43,
@@ -2272,7 +2272,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:41.750Z",
+        "start_timestamp": "2023-03-25T00:05:19.699Z",
         "line": 45,
         "name": "logged user cannot use already used custom urls",
         "description": "",
@@ -2282,7 +2282,7 @@
         "steps": [
           {
             "result": {
-              "duration": 450703,
+              "duration": 383607,
               "status": "passed"
             },
             "line": 46,
@@ -2294,7 +2294,7 @@
           },
           {
             "result": {
-              "duration": 212245695,
+              "duration": 170266152,
               "status": "passed"
             },
             "line": 47,
@@ -2320,7 +2320,7 @@
           },
           {
             "result": {
-              "duration": 182501,
+              "duration": 179203,
               "status": "passed"
             },
             "line": 50,
@@ -2338,7 +2338,7 @@
           },
           {
             "result": {
-              "duration": 228401,
+              "duration": 168603,
               "status": "passed"
             },
             "line": 51,
@@ -2350,7 +2350,7 @@
           },
           {
             "result": {
-              "duration": 16466509,
+              "duration": 14465834,
               "status": "passed"
             },
             "line": 52,
@@ -2376,7 +2376,7 @@
           },
           {
             "result": {
-              "duration": 157401,
+              "duration": 109402,
               "status": "passed"
             },
             "line": 55,
@@ -2394,7 +2394,7 @@
           },
           {
             "result": {
-              "duration": 12930785,
+              "duration": 11009178,
               "status": "passed"
             },
             "line": 56,
@@ -2420,7 +2420,7 @@
           },
           {
             "result": {
-              "duration": 158901,
+              "duration": 127102,
               "status": "passed"
             },
             "line": 59,
@@ -2475,7 +2475,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-03-16T19:55:42.009Z",
+        "start_timestamp": "2023-03-25T00:05:19.908Z",
         "line": 3,
         "name": "anyone can be redirected",
         "description": "",
@@ -2485,7 +2485,7 @@
         "steps": [
           {
             "result": {
-              "duration": 571504,
+              "duration": 400806,
               "status": "passed"
             },
             "line": 4,
@@ -2497,7 +2497,7 @@
           },
           {
             "result": {
-              "duration": 208415270,
+              "duration": 178344582,
               "status": "passed"
             },
             "line": 5,
@@ -2523,7 +2523,7 @@
           },
           {
             "result": {
-              "duration": 300002,
+              "duration": 179303,
               "status": "passed"
             },
             "line": 8,
@@ -2541,7 +2541,7 @@
           },
           {
             "result": {
-              "duration": 446103,
+              "duration": 202103,
               "status": "passed"
             },
             "line": 9,
@@ -2553,7 +2553,7 @@
           },
           {
             "result": {
-              "duration": 27144678,
+              "duration": 13696221,
               "status": "passed"
             },
             "line": 10,
@@ -2573,7 +2573,7 @@
           },
           {
             "result": {
-              "duration": 168601,
+              "duration": 107702,
               "status": "passed"
             },
             "line": 12,
@@ -2591,7 +2591,7 @@
           },
           {
             "result": {
-              "duration": 83901,
+              "duration": 65601,
               "status": "passed"
             },
             "line": 13,
@@ -2603,7 +2603,7 @@
           },
           {
             "result": {
-              "duration": 23037151,
+              "duration": 12778107,
               "status": "passed"
             },
             "line": 14,
@@ -2621,7 +2621,7 @@
           },
           {
             "result": {
-              "duration": 158401,
+              "duration": 115002,
               "status": "passed"
             },
             "line": 15,
@@ -2648,7 +2648,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:42.293Z",
+        "start_timestamp": "2023-03-25T00:05:20.125Z",
         "line": 17,
         "name": "cannot be redirected with bad url",
         "description": "",
@@ -2658,7 +2658,7 @@
         "steps": [
           {
             "result": {
-              "duration": 769205,
+              "duration": 431507,
               "status": "passed"
             },
             "line": 18,
@@ -2670,7 +2670,7 @@
           },
           {
             "result": {
-              "duration": 9328961,
+              "duration": 12175397,
               "status": "passed"
             },
             "line": 19,
@@ -2688,7 +2688,7 @@
           },
           {
             "result": {
-              "duration": 158201,
+              "duration": 115902,
               "status": "passed"
             },
             "line": 20,
@@ -2715,7 +2715,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-03-16T19:55:42.315Z",
+        "start_timestamp": "2023-03-25T00:05:20.148Z",
         "line": 22,
         "name": "can browse custom short urls",
         "description": "",
@@ -2725,7 +2725,7 @@
         "steps": [
           {
             "result": {
-              "duration": 497403,
+              "duration": 383506,
               "status": "passed"
             },
             "line": 23,
@@ -2737,7 +2737,7 @@
           },
           {
             "result": {
-              "duration": 205009648,
+              "duration": 172222483,
               "status": "passed"
             },
             "line": 24,
@@ -2763,7 +2763,7 @@
           },
           {
             "result": {
-              "duration": 181901,
+              "duration": 155002,
               "status": "passed"
             },
             "line": 27,
@@ -2781,7 +2781,7 @@
           },
           {
             "result": {
-              "duration": 2256115,
+              "duration": 181903,
               "status": "passed"
             },
             "line": 28,
@@ -2793,7 +2793,7 @@
           },
           {
             "result": {
-              "duration": 25436767,
+              "duration": 14131428,
               "status": "passed"
             },
             "line": 29,
@@ -2819,7 +2819,7 @@
           },
           {
             "result": {
-              "duration": 170901,
+              "duration": 104401,
               "status": "passed"
             },
             "line": 32,
@@ -2837,7 +2837,7 @@
           },
           {
             "result": {
-              "duration": 294602,
+              "duration": 223604,
               "status": "passed"
             },
             "line": 33,
@@ -2859,7 +2859,7 @@
           },
           {
             "result": {
-              "duration": 24555462,
+              "duration": 11362083,
               "status": "passed"
             },
             "line": 34,
@@ -2877,7 +2877,7 @@
           },
           {
             "result": {
-              "duration": 147400,
+              "duration": 90702,
               "status": "passed"
             },
             "line": 35,
